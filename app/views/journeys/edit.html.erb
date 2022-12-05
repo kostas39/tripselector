@@ -1,0 +1,10 @@
+<h1>Edit your journey </h1>
+
+<%= simple_form_for(@journey) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :tag %>
+  <%= f.input :comment %>
+  <%= f.submit %>
+<% end %>
