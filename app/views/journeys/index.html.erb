@@ -1,11 +1,12 @@
 <h1>Here are all the journeys</h1>
 
-<ul>
+
 <% @journeys.each do |journey| %>
+<ul>
 <li> <%= journey.name %> </li>
 <li> <%= journey.start_date %> </li>
 <li> <%= journey.end_date %> </li>
-<li> <%= journey.tags %> </li>
-<li> <%= journey.comments %> </li>
-<% end %>
+<li> <%= journey.tag %> </li>
+<li> <%= journey.comment %> </li>
 </ul>
+<% end %>

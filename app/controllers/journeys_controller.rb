@@ -17,6 +17,7 @@ class JourneysController < ApplicationController
     @journey.user_id = current_user.id
     if @journey.save
       flash.notice = "Journey created"
+      redirect_to journey_path(@journey)
     else
       render :new, status: :unprocessable_entity
       flash.notice = "Journey not created"
@@ -45,6 +46,6 @@ class JourneysController < ApplicationController
   private
 
   def journey_params
-    params.require(:journey).permit(:start_date, :end_date, :tags, :comment, :user_id)
+    params.require(:journey).permit(:start_date, :end_date, :tag, :comment, :user_id, :name)
   end
 end
