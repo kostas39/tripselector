@@ -1,4 +1,5 @@
 class JourneysController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :new, :index, :show, :create, :edit, :update, :destroy ]
   def index
     @journeys = Journey.all
   end
@@ -13,8 +14,13 @@ class JourneysController < ApplicationController
 
   def create
     @journey = Journey.new(journey_params)
-    @journey.user_id = current_user
-    @journey.save
+    @journey.user_id = current_user.id
+    if @journey.save
+      flash.notice = "Journey created"
+    else
+      render :new, status: :unprocessable_entity
+      flash.notice = "Journey not created"
+    end
   end
 
   def edit
@@ -23,7 +29,12 @@ class JourneysController < ApplicationController
 
   def update
     @journey = Journey.new(journey_params)
-    @journey.save
+    if @journey.save
+      flash.notice = "Journey edited"
+    else
+      render :edit, status: :unprocessable_entity
+      flash.notice = "Journey not edited"
+    end
   end
 
   def destroy
