@@ -25,7 +25,7 @@ class JourneysController < ApplicationController
     @cities.each do |city|
       city_tags_array = city.tags.downcase.split(", ")
       city_tags_array.each do |tag|
-        if tag == @journeyParams[:tag]
+        if tag == @journeyParams[:tag].downcase
           @tagged_cities << city
         end
       end
@@ -37,21 +37,37 @@ class JourneysController < ApplicationController
     # should run the number of days of the journey, / 3 - 1
 
     first_city = @tagged_cities.sample
-    if @journey.save
+    if @journey.save # starts big if statement **
       city_journey_list = []
-        cj1 = CityJourney.new(city: first_city, journey: @journey, start_date: @journey[:start_date], end_date: @journey[:end_date] )
-        cj1.save
-        city_journey_list << cj1
-        3.times do
-          previous_city_journey = city_journey_list.last
-          next_city_name = previous_city_journey.city.next_cities.sample.strip
-          next_city = City.find_by_name(next_city_name)
-          city_journey = CityJourney.new(city: next_city,
-                                         journey: @journey,
-                                         start_date: previous_city_journey.end_date,
-                                         end_date: previous_city_journey.end_date + 3)
-        city_journey.save
-        city_journey_list << city_journey
+      first_cj = CityJourney.new(city: first_city,
+                                 journey: @journey,
+                                 start_date: @journey[:start_date],
+                                 end_date: @journey[:start_date] + 3)
+      first_cj.save
+      city_journey_list << first_cj
+      until city_journey_list.length == 4
+        previous_city_journey = city_journey_list.last
+        cj_saved_city_names = []
+        city_journey_list.each do |cj|
+          cj_saved_city_names << cj.city.name
+        end
+        next_city_name = nil
+        cj_saved_city_names.each do |city_name|
+          while next_city_name.nil? || next_city_name == city_name
+            next_city_name = previous_city_journey.city.next_cities.sample.strip
+          end
+        end
+        next_city = City.find_by_name(next_city_name)
+        city_journey = CityJourney.new(city: next_city,
+                                       journey: @journey,
+                                       start_date: previous_city_journey.end_date,
+                                       end_date: previous_city_journey.end_date + 3)
+
+        if city_journey.save
+          city_journey_list << city_journey
+        else
+          # run city generator again
+        end
       end
       flash.notice = "Journey created"
       redirect_to journey_path(@journey)
