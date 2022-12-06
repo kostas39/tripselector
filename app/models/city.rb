@@ -1,7 +1,7 @@
 class City < ApplicationRecord
   # has_many :activities
-  geocoded_by :city
-  after_validation :geocode, if: :will_save_change_to_city?
+  geocoded_by :name
+  after_validation :geocode, if: :will_save_change_to_name?
   # belongs_to :city_journey
 
 
