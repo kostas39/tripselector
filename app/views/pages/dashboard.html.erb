@@ -1,0 +1,49 @@
+<%# compare start dates of journeys  %>
+<%# trip_past? trip_present? trip_future? %>
+<%# All return true or false %>
+<%# move into groups -> previous | present | future %>
+
+<%# <% past_journeys = [] %>
+<%# <% current_journeys = [] %>
+<%# <% future_journeys = [] %>
+<div class="card-deck">
+  <div class="card bg-light p-3 m-3">
+    <h1>Past Journeys</h1>
+    <% @journeys.each do |journey| %>
+    <% if journey.end_date < Date.today %>
+    <p>Name: <%= journey.name %></p>
+    <p>Comment: <%= journey.comment %></p>
+    <p>Tag: <%= journey.tag %></p>
+    <p>Start date: <%= journey.start_date %></p>
+    <p>End date: <%= journey.end_date %></p>
+    <p>=========================</p>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="card bg-light p-3 m-3">
+    <h1>Current Journeys</h1>
+    <% @journeys.each do |journey| %>
+    <% if journey.start_date < Date.today && journey.end_date > Date.today %>
+    <p>Name: <%= journey.name %></p>
+    <p>Comment: <%= journey.comment %></p>
+    <p>Tag: <%= journey.tag %></p>
+    <p>Start date: <%= journey.start_date %></p>
+    <p>End date: <%= journey.end_date %></p>
+    <p>=========================</p>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="card bg-light p-3 m-3">
+    <h1>Future Journeys</h1>
+    <% @journeys.each do |journey| %>
+    <% if journey.start_date > Date.today %>
+    <p>Name: <%= journey.name %></p>
+    <p>comment: <%= journey.comment %></p>
+    <p>Tag: <%= journey.tag %></p>
+    <p>Start date: <%= journey.start_date %></p>
+    <p>End date: <%= journey.end_date %></p>
+    <p>=========================</p>
+    <% end %>
+    <% end %>
+  </div>
+</div>
