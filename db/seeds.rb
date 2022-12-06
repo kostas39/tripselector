@@ -51,7 +51,7 @@ marseille = City.create(name: "Marseille",
             tags: "Sea, Historical, Food, Museums, Sunny",
             next_cities: "PParis, Lyon, Chambéry, Versailles, Toulouse, Grenoble, Annecy, Annecy")
 
-la_rochelle = City.create(name: "La Rochelle",
+la_rochelle = City.create(name: "La-Rochelle",
             description: "",
             latitude:46.1591126,
             longitude:-1.1520434,
@@ -131,7 +131,7 @@ aubenas = City.create(name: "Aubenas",
             tags: "Adventurous, Hidden gem",
             next_cities: "PParis, Lyon, Chambéry, Versailles, Grenoble, Annecy, Annecy")
 
-ars_en_re = City.create(name: "Ars en Ré",
+ars_en_re = City.create(name: "Ars-en-Ré",
             description: "",
             latitude:46.208056,
             longitude:-1.515833,
