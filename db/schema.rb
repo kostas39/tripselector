@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-
-ActiveRecord::Schema[7.0].define(version: 2022_12_05_135938) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_105501) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,6 +35,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_135938) do
     t.string "continent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "next_cities", array: true
+  end
+
+  create_table "city_journeys", force: :cascade do |t|
+    t.bigint "city_id"
+    t.bigint "journey_id"
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_city_journeys_on_city_id"
+    t.index ["journey_id"], name: "index_city_journeys_on_journey_id"
   end
 
   create_table "journeys", force: :cascade do |t|
@@ -67,6 +76,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_135938) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "activities", "cities"
+  add_foreign_key "city_journeys", "cities"
+  add_foreign_key "city_journeys", "journeys"
   add_foreign_key "journeys", "users"
-  end
 end
