@@ -9,6 +9,10 @@ class JourneysController < ApplicationController
   end
 
   def new
+    if current_user.nil?
+      redirect_to "/users/sign_in"
+      flash.notice = "You must be signed in to create your Journey"
+    end
     @journey = Journey.new
   end
 
