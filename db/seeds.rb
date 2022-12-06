@@ -16,3 +16,5 @@ paris = City.create(name: "Paris",
             tags: "Romantic, Historical")
 
 Journey1 = Journey.create(user: User.first, start_date: Date.today, end_date: Date.tomorrow, tag: "romantic", comment: "our honeymoon")
+
+cj = CityJourney.create(city:City.last, journey:Journey.last, start_date: Date.today, end_date: Date.tomorrow)
