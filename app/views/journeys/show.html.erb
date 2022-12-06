@@ -2,8 +2,8 @@
 
 <p> <%= "This journey starts on the #{@journey.start_date} and ends on the #{@journey.end_date}" %>
 <%= @journey.country %>
-<% @journey.cities.each do |city| %>
-<%= city.name %>
+<% @journey.city_journeys.each do |city_journey| %>
+<%= city_journey.city.name %>
 <% end %>
 
 

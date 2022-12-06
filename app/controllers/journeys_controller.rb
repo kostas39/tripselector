@@ -31,20 +31,28 @@ class JourneysController < ApplicationController
       end
     end
 
-    firstCity = @tagged_cities.sample(1)
+    # before create, check not same city as cities inside list
+    # add more tags
+    # add more seeds
+    # should run the number of days of the journey, / 3 - 1
 
-
-
-    raise
-    # t.string :name
-    # t.string :tags
-    # t.text :description
-    # t.float :latitude
-    # t.float :longitude
-    # t.string :region
-    # t.string :country
-    # t.string :continent
+    first_city = @tagged_cities.sample
     if @journey.save
+      city_journey_list = []
+        cj1 = CityJourney.new(city: first_city, journey: @journey, start_date: @journey[:start_date], end_date: @journey[:end_date] )
+        cj1.save
+        city_journey_list << cj1
+        3.times do
+          previous_city_journey = city_journey_list.last
+          next_city_name = previous_city_journey.city.next_cities.sample.strip
+          next_city = City.find_by_name(next_city_name)
+          city_journey = CityJourney.new(city: next_city,
+                                         journey: @journey,
+                                         start_date: previous_city_journey.end_date,
+                                         end_date: previous_city_journey.end_date + 3)
+        city_journey.save
+        city_journey_list << city_journey
+      end
       flash.notice = "Journey created"
       redirect_to journey_path(@journey)
     else
