@@ -2,6 +2,7 @@
 
 <%= simple_form_for(@journey) do |f| %>
   <%= f.input :name %>
+  <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "New Zealand", "France" ] %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.input :tag %>

@@ -13,7 +13,7 @@ paris = City.create(name: "Paris",
             region: "ile-de-france",
             country: "France",
             continent: "Europe",
-            tags: "Romantic, Historical")
+            tags: "Romantic, historical")
 
 Journey1 = Journey.create(user: User.first, start_date: Date.today, end_date: Date.tomorrow, tag: "romantic", comment: "our honeymoon")
 

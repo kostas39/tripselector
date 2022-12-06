@@ -1,6 +1,11 @@
 <h1> <%= @journey.name %></h1>
 
 <p> <%= "This journey starts on the #{@journey.start_date} and ends on the #{@journey.end_date}" %>
+<%= @journey.country %>
+<% @journey.cities.each do |city| %>
+<%= city.name %>
+<% end %>
+
 
 <%# so here we will display the journey, which has many city_journeys
 
