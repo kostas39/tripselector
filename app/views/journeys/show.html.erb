@@ -1,3 +1,21 @@
 <h1> <%= @journey.name %></h1>
 
 <p> <%= "This journey starts on the #{@journey.start_date} and ends on the #{@journey.end_date}" %>
+<%= @journey.country %>
+<% @journey.city_journeys.each do |city_journey| %>
+<%= city_journey.city.name %>
+<% end %>
+
+
+<%# so here we will display the journey, which has many city_journeys
+
+so
+  @journey.city_journeys.each do |city_journey|
+    City_journey.city
+    City_journey.start_date
+    City_journey.end_date
+  end
+
+  above will show each city to be visited and on what days. can be formatted later.
+
+ %>
