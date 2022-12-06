@@ -4,4 +4,9 @@ class PagesController < ApplicationController
   def home
 
   end
+
+  def dashboard
+    # show past present and future journeys
+    @journeys = current_user.journeys
+  end
 end

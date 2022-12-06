@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   resources :journeys
   resources :cities, only:[:index, :show]
 
+  get 'dashboard', to: 'pages#dashboard'
 end
