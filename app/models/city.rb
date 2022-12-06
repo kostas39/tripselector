@@ -1,8 +1,9 @@
 class City < ApplicationRecord
   # has_many :activities
 
-  # belongs_to :city_journey
-
+  has_many :city_journeys
+  has_many :journeys, through: :city_journeys
+  
   validates :latitude,
             presence: true
   validates :longitude,
