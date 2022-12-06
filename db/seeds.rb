@@ -23,7 +23,7 @@ paris = City.create(name: "Paris",
             continent: "Europe",
             region: "Ile de France",
             tags: "Historical, Museums, Romantic, Touristy",
-            next_cities: " Lyon, Marseille, La Rochelle, Lille, Chambéry, Nantes, Versailles, Toulouse, Bordeaux, Aubenas, Ars en Ré, Strasbourg, Grenoble, Annecy, Biarritz, Saint Malo")
+            next_cities: "test, Lyon, Marseille, La Rochelle, Lille, Chambéry, Nantes, Versailles, Toulouse, Bordeaux, Aubenas, Ars en Ré, Strasbourg, Grenoble, Annecy, Biarritz, Saint Malo, test")
 
 lyon = City.create(name: "Lyon",
             description: "",
@@ -33,7 +33,7 @@ lyon = City.create(name: "Lyon",
             continent: "Europe",
             region: "Auvergne Rhone Alpes",
             tags: "Food, Historical, Museums",
-            next_cities: " Paris, Marseille, Chambéry, Versailles, Aubenas, Grenoble, Annecy")
+            next_cities: "test, Paris, Marseille, Chambéry, Versailles, Aubenas, Grenoble, Annecy, test")
 
 marseille = City.create(name: "Marseille",
             description: "",
@@ -43,7 +43,7 @@ marseille = City.create(name: "Marseille",
             continent: "Europe",
             region: "Provences Alpes Cotes d'azur",
             tags: "Sea, Historical, Food, Museums, Sunny",
-            next_cities: " Paris, Lyon, Chambéry, Versailles, Toulouse, Grenoble, Annecy")
+            next_cities: "test, Paris, Lyon, Chambéry, Versailles, Toulouse, Grenoble, Annecy, test")
 
 la_rochelle = City.create(name: "La Rochelle",
             description: "",
@@ -53,7 +53,7 @@ la_rochelle = City.create(name: "La Rochelle",
             continent: "Europe",
             region: "Nouvelle Aquitaine",
             tags: "Sea, Historical",
-            next_cities: " Paris, Nantes, Versailles, Toulouse, Bordeaux, Ars en Ré, Biarritz, Saint Malo")
+            next_cities: "test, Paris, Nantes, Versailles, Toulouse, Bordeaux, Ars en Ré, Biarritz, Saint Malo, test")
 
 lille = City.create(name: "Lille",
             description: "",
@@ -63,7 +63,7 @@ lille = City.create(name: "Lille",
             continent: "Europe",
             region: "Haut de France",
             tags: "Historical, Food",
-            next_cities: " Paris, , Versailles, Strasbourg")
+            next_cities: "test, Paris, Versailles, Strasbourg, test")
 
 chambery = City.create(name: "Chambéry",
             description: "",
@@ -73,7 +73,7 @@ chambery = City.create(name: "Chambéry",
             continent: "Europe",
             region: "Auvergne Rhone Alpes",
             tags: "Mountain, Adventurous",
-            next_cities: " Paris, Lyon, Marseille, Versailles, Aubenas, Grenoble, Annecy")
+            next_cities: "test, Paris, Lyon, Marseille, Versailles, Aubenas, Grenoble, Annecy, test")
 
 nantes = City.create(name: "Nantes",
             description: "",
@@ -83,7 +83,7 @@ nantes = City.create(name: "Nantes",
             continent: "Europe",
             region: "Loire Atlantique",
             tags: "Sea, Museums",
-            next_cities: " Paris, La Rochelle, Versailles, Toulouse, Ars en Ré, Biarritz, Saint Malo")
+            next_cities: "test, Paris, La Rochelle, Versailles, Toulouse, Ars en Ré, Biarritz, Saint Malo, test")
 
 versailles = City.create(name: "Versailles",
             description: "",
@@ -93,7 +93,7 @@ versailles = City.create(name: "Versailles",
             continent: "Europe",
             region: "Ile de France",
             tags: "Historical, Touristy",
-            next_cities: " Paris, Lyon, Marseille, La Rochelle, Lille, Chambéry, Nantes, , Toulouse, Bordeaux, Aubenas, Ars en Ré, Strasbourg, Grenoble, Annecy, Biarritz, Saint Malo")
+            next_cities: "test, Paris, Lyon, Marseille, La Rochelle, Lille, Chambéry, Nantes, , Toulouse, Bordeaux, Aubenas, Ars en Ré, Strasbourg, Grenoble, Annecy, Biarritz, Saint Malo, test")
 
 toulouse = City.create(name: "Toulouse",
             description: "",
@@ -103,7 +103,7 @@ toulouse = City.create(name: "Toulouse",
             continent: "Europe",
             region: "Occitanie",
             tags: "Historical, Food, Sunny",
-            next_cities: " Paris, Marseille, La Rochelle, Nantes, Versailles, Bordeaux, Ars en Ré, Biarritz")
+            next_cities: "test, Paris, Marseille, La Rochelle, Nantes, Versailles, Bordeaux, Ars en Ré, Biarritz, test")
 
 bordeaux = City.create(name: "Bordeaux",
             description: "",
@@ -113,7 +113,7 @@ bordeaux = City.create(name: "Bordeaux",
             continent: "Europe",
             region: "Nouvelle Aquitaine",
             tags: "Food, Sea, Adventurous, Romantic",
-            next_cities: " Paris, La Rochelle, Versailles, Toulouse, Ars en Ré, Biarritz")
+            next_cities: "test, Paris, La Rochelle, Versailles, Toulouse, Ars en Ré, Biarritz, test")
 
 aubenas = City.create(name: "Aubenas",
             description: "",
@@ -123,7 +123,7 @@ aubenas = City.create(name: "Aubenas",
             continent: "Europe",
             region: "Auvergne Rhone Alpes",
             tags: "Adventurous, Hidden gem",
-            next_cities: " Paris, Lyon, Chambéry, Versailles, Grenoble, Annecy")
+            next_cities: "test, Paris, Lyon, Chambéry, Versailles, Grenoble, Annecy, test")
 
 ars_en_re = City.create(name: "Ars en Ré",
             description: "",
@@ -133,7 +133,7 @@ ars_en_re = City.create(name: "Ars en Ré",
             continent: "Europe",
             region: "Nouvelle Aquitaine",
             tags: "Sea, Touristy, Hidden gem",
-            next_cities: " Paris, La Rochelle, Nantes, Versailles, Toulouse, Bordeaux, Biarritz, Saint Malo")
+            next_cities: "test, Paris, La Rochelle, Nantes, Versailles, Toulouse, Bordeaux, Biarritz, Saint Malo, test")
 
 strasbourg = City.create(name: "Strasbourg",
             description: "",
@@ -143,7 +143,7 @@ strasbourg = City.create(name: "Strasbourg",
             continent: "Europe",
             region: "Grand Est",
             tags: "Food, Historical, Sunny",
-            next_cities: " Paris, Lille, Versailles")
+            next_cities: "test, Paris, Lille, Versailles, test")
 
 grenoble = City.create(name: "Grenoble",
             description: "",
@@ -153,7 +153,7 @@ grenoble = City.create(name: "Grenoble",
             continent: "Europe",
             region: "Auvergne Rhone Alpes",
             tags: "Mountain, Adventurous",
-            next_cities: " Paris, Lyon, Marseille, Chambéry, Versailles, Aubenas, Annecy ")
+            next_cities: "test, Paris, Lyon, Marseille, Chambéry, Versailles, Aubenas, Annecy, test")
 
 annecy = City.create(name: "Annecy",
             description: "",
@@ -163,7 +163,7 @@ annecy = City.create(name: "Annecy",
             continent: "Europe",
             region: "Auvergne Rhone Alpes",
             tags: "Mountain, Adventurous, Romantic",
-            next_cities: " Paris, Lyon, Marseille, Chambéry, Versailles, Aubenas, Grenoble")
+            next_cities: "test, Paris, Lyon, Marseille, Chambéry, Versailles, Aubenas, Grenoble, test")
 
 biarritz = City.create(name: "Biarritz",
             description: "",
@@ -173,7 +173,7 @@ biarritz = City.create(name: "Biarritz",
             continent: "Europe",
             region: "Nouvelle Aquitaine",
             tags: "Sea, Food, Adventurous",
-            next_cities: " Paris, La Rochelle, Nantes, Versailles, Toulouse, Bordeaux, Ars en Ré")
+            next_cities: "test, Paris, La Rochelle, Nantes, Versailles, Toulouse, Bordeaux, Ars en Ré, test")
 
 Journey1 = Journey.create(user: User.first, start_date: Date.today, end_date: Date.tomorrow, tag: "romantic", comment: "our honeymoon")
 
