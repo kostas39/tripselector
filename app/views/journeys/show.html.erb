@@ -1,21 +1,13 @@
-<h1> <%= @journey.name %></h1>
+<div class="city-banner">
+  <h1> <%= @journey.name %> </h1>
+</div>
 
-<p> <%= "This journey starts on the #{@journey.start_date} and ends on the #{@journey.end_date}" %>
-<%= @journey.country %>
+<p> <%= "This #{@journey.tag} journey starts on #{@journey.start_date.strftime("%a %d %B %Y")} in #{@journey.city_journeys.first.city.name} and ends on #{@journey.end_date.strftime("%a %d %B %Y")} in #{@journey.city_journeys.last.city.name}." %>
+<p> It will take you through </p>
 <% @journey.city_journeys.each do |city_journey| %>
-<%= city_journey.city.name %>
+  <ul>
+    <li> <%= " #{city_journey.city.name} from #{city_journey.start_date.strftime("%a %d %B %Y")} to #{city_journey.end_date.strftime("%a %d %B %Y")}" %> </li>
+  </ul>
 <% end %>
 
-
-<%# so here we will display the journey, which has many city_journeys
-
-so
-  @journey.city_journeys.each do |city_journey|
-    City_journey.city
-    City_journey.start_date
-    City_journey.end_date
-  end
-
-  above will show each city to be visited and on what days. can be formatted later.
-
- %>
+<h4> Enjoy your trip </h4>
