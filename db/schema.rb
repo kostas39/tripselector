@@ -35,6 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_132650) do
     t.string "continent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "next_cities", array: true
   end
 
   create_table "city_journeys", force: :cascade do |t|

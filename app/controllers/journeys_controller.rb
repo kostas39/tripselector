@@ -31,6 +31,10 @@ class JourneysController < ApplicationController
       end
     end
 
+    firstCity = @tagged_cities.sample(1)
+
+
+
     raise
     # t.string :name
     # t.string :tags
