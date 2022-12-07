@@ -1,0 +1,9 @@
+.link-cust {
+  color:$link;
+  padding: 2px;
+}
+.link-cust:hover {
+  color:$link-hover;
+  border-bottom: 4px solid $link-hover;
+  transition: 0.2s ease;
+}
