@@ -1,4 +1,4 @@
-<div class="city-banner">
+<div class="city-banner d-flex justify-content-center align-items-center" style="background-image: url('<%= image_path "#{@journey.city_journeys.first.city.name}.jpg"%>')">
   <h1> <%= @journey.name %> </h1>
 </div>
 
@@ -12,9 +12,8 @@
   <% end %>
   <h4> Enjoy your trip </h4>
   <div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
-<%= image_tag "#{@journey.city_journeys.first.city.name}.jpg" , :class => "city-banner-2"%>
