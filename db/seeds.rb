@@ -21,14 +21,15 @@
 #            continent: "Europe",
 #            tags: "Romantic, Historical")
 
-# City.create(name: "Paris",
-#             description: "",
-#             latitude: 48.866667,
-#             longitude: 2.333333,
-#             country: "France",
-#             continent: "Europe",
-#             region: "Ile de France",
-#             tags: "Historical, Museums, Romantic, Touristy")
+ City.create(name: "Paris",
+             description: "",
+             latitude: 48.866667,
+             longitude: 2.333333,
+             country: "France",
+             continent: "Europe",
+             region: "Ile de France",
+             tags: "Historical, Museums, Romantic, Touristy"),
+             next_cities: %w[Versailles Lyon Marseille La-Rochelle Lille Chambéry Nantes Toulouse Bordeaux Aubenas Ars-en-Ré Strasbourg Grenoble Annecy Biarritz Saint-Malo])
 
 City.create(name: "Lyon",
             description: "",
