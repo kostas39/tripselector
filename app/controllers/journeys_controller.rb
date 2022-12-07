@@ -23,9 +23,9 @@ class JourneysController < ApplicationController
     @cities = City.where(country: @journeyParams[:country])
     @tagged_cities = []
     @cities.each do |city|
-      city_tags_array = city.tags.downcase.split(", ")
+      city_tags_array = city.tags.downcase.split(", ") #takes the tags of the city in the desired country
       city_tags_array.each do |tag|
-        if tag == @journeyParams[:tag].downcase
+        if tag == @journeyParams[:tag].downcase #compares city tags with journey tag
           @tagged_cities << city
         end
       end
@@ -35,17 +35,18 @@ class JourneysController < ApplicationController
     # add more tags
     # add more seeds
     # should run the number of days of the journey, / 3 - 1
-
-    first_city = @tagged_cities.sample
-    if @journey.save # starts big if statement **
+    journey_length = @journey.end_date - @journey.start_date + 1
+    number_of_stops = [journey_length.to_i / 3,1].max
+    first_city = @tagged_cities.sample #chooses at random a city in the right country, with the right tag
+    if @journey.save # starts big if statement ** #saves the journey. We can now create city journeys
       city_journey_list = []
       first_cj = CityJourney.new(city: first_city,
                                  journey: @journey,
                                  start_date: @journey[:start_date],
                                  end_date: @journey[:start_date] + 3)
       first_cj.save
-      city_journey_list << first_cj
-      until city_journey_list.length == 4
+      city_journey_list << first_cj #adds the first city to the list of cj for this trip
+      until city_journey_list.length == number_of_stops
         previous_city_journey = city_journey_list.last
         cj_saved_city_names = []
         city_journey_list.each do |cj|
@@ -69,6 +70,8 @@ class JourneysController < ApplicationController
           # run city generator again
         end
       end
+      city_journey_list.last.end_date = @journey.end_date
+      city_journey_list.last.save
       flash.notice = "Journey created"
       redirect_to journey_path(@journey)
     else
