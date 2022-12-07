@@ -11,7 +11,7 @@
     <h1>Past Journeys</h1>
     <% @journeys.each do |journey| %>
     <% if journey.end_date < Date.today %>
-    <p>Name: <%= journey.name %></p>
+    <p>Name: <%= link_to "#{journey.name}", journey_path(journey) %></p>
     <p>Comment: <%= journey.comment %></p>
     <p>Tag: <%= journey.tag %></p>
     <p>Start date: <%= journey.start_date %></p>
