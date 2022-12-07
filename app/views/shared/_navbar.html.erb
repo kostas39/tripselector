@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "https://manage.wix.com/_serverless/brand-maker/api/v1/design/040938c0-d2e5-4690-80b7-c981969fea1d/preview-redirect?preset=thumbnail" %>
     <% end %>
 
@@ -12,10 +12,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "Home", "/", class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Dashboard", "dashboard", class: "nav-link" %>
