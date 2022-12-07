@@ -15,10 +15,6 @@
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
 </div>
-
-
-
-
-<% image = "#{@journey.city_journeys.first.city.name}.jpg"%>
-<%= image_tag("#{image}", :class => "city-banner-2") %>
+<%= image_tag "#{@journey.city_journeys.first.city.name}.jpg" , :class => "city-banner-2"%>

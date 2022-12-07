@@ -20,6 +20,11 @@
 #            country: "France",
 #            continent: "Europe",
 #            tags: "Romantic, Historical")
+Activity.destroy_all
+City.destroy_all
+CityJourney.destroy_all
+Journey.destroy_all
+User.destroy_all
 
 paris = City.create(name: "Paris",
             description: "",
