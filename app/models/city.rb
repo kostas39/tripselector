@@ -7,6 +7,7 @@ class City < ApplicationRecord
 
   has_many :city_journeys
   has_many :journeys, through: :city_journeys
+  has_many :activities
 
   validates :latitude,
             presence: true
