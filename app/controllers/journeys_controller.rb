@@ -2,10 +2,19 @@ class JourneysController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :new, :index, :show, :create, :edit, :update, :destroy ]
   def index
     @journeys = Journey.all
+
   end
 
   def show
     @journey = Journey.find(params[:id])
+    @cities = @journey.cities
+    @markers = @cities.geocoded.map do |city|
+      {
+        lat: city.latitude,
+        lng: city.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { city: city})
+    }
+    end
   end
 
   def new
