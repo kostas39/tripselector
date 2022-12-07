@@ -3,8 +3,8 @@
 <%= simple_form_for(@journey) do |f| %>
   <%= f.input :name %>
   <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "New Zealand"] %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
+  <%= f.input :start_date, as: :string, input_html: {data: { controller: "flatpickr"}, id: "range_start" } %>
+  <%= f.input :end_date, as: :string, input_html: { data: { controller: "flatpickr" }, id: "range_end" } %>
   <%= f.input :tag, collection: ["Adventurous", "Food", "Hidden gem", "Historical", "Moutain", "Museums", "Romantic", "Sea", "Sunny", "Touristy"] %>
   <%= f.input :comment %>
   <%= f.submit %>
