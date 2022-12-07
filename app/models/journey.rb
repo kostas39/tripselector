@@ -6,4 +6,6 @@ class Journey < ApplicationRecord
   validates :start_date, presence: true
   validates :end_date, presence: true
   validates :name, presence: true
+  validates :country, presence: true
+  validates :tag, presence: true
 end

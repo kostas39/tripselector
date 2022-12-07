@@ -1,11 +1,12 @@
-<h1>Create a new journey </h1>
+<div class="form-container">
+  <h1>Create a new journey </h1>
 
-<%= simple_form_for(@journey) do |f| %>
+<%= simple_form_for @journey, data: { controller: 'flatpickr' } do |f| %>
   <%= f.input :name %>
   <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "New Zealand"] %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.input :tag, collection: ["Romantic", "Adventurous", "Sunny", "Moutain", "Historical", "Museums", "Food", "Sea", "Touristy", "Hidden gem"] %>
-  <%= f.input :comment %>
+  <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } } %>
+  <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" } } %>
+  <%= f.input :tag, collection: ["Adventurous", "Food", "Hidden gem", "Historical", "Moutain", "Museums", "Romantic", "Sea", "Sunny", "Touristy"] %>
   <%= f.submit %>
 <% end %>
+</div>
