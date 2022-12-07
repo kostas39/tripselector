@@ -1,24 +1,28 @@
-<div class="city-banner">
+<div class="city-banner d-flex justify-content-center align-items-center" style="background-image: url('<%= image_path "#{@journey.city_journeys.first.city.name}.jpg"%>')">
   <h1> <%= @journey.name %> </h1>
 </div>
 
-<div class="centered-text">
-  <p> <%= "This #{@journey.tag} journey starts on #{@journey.start_date.strftime("%a %d %B %Y")} in #{@journey.city_journeys.first.city.name} and ends on #{@journey.end_date.strftime("%a %d %B %Y")} in #{@journey.city_journeys.last.city.name}." %>
+<div class="page-container">
+  <h4 class="mb-4"> <%= "This #{@journey.tag} journey starts on #{@journey.start_date.strftime("%a %d %B")} in #{@journey.city_journeys.first.city.name} and ends on #{@journey.end_date.strftime("%a %d %B %Y")} in #{@journey.city_journeys.last.city.name}." %> </h4>
   <p> It will take you through </p>
   <% @journey.city_journeys.each do |city_journey| %>
-    <ul>
-      <li> <%= " #{city_journey.city.name} from #{city_journey.start_date.strftime("%a %d %B %Y")} to #{city_journey.end_date.strftime("%a %d %B %Y")}" %> </li>
-    </ul>
+    <div class="city-journey-card">
+      <%= image_tag("#{city_journey.city.name}.jpg", :class => "city-card-picture") %>
+      <div class="city-journey-info">
+        <h4> <strong> <%= city_journey.city.name %> </strong> <%= "from #{city_journey.start_date.strftime("%a %d %B")} to #{city_journey.end_date.strftime("%a %d %B")}" %> </h4>
+        <% city_journey.city.activities.each do |activity| %>
+          <ul>
+            <li> <strong> <%= activity.name %> </strong> <%= ": #{activity.description}" %> </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
   <% end %>
   <h4> Enjoy your trip </h4>
   <div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+    class = "mb-5 mt-5">
+  </div>
 </div>
-
-
-
-
-<% image = "#{@journey.city_journeys.first.city.name}.jpg"%>
-<%= image_tag("#{image}", :class => "city-banner-2") %>

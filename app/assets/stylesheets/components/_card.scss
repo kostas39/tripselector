@@ -1,0 +1,17 @@
+.city-journey-card {
+border-radius: 5px;
+box-shadow: 0px 0px 5px darkgrey;
+border-color: black;
+margin: 10px;
+padding: 5px;
+display: flex;
+align-items: center;
+height: 230px;
+}
+
+.city-card-picture {
+  height: 90%;
+  object-fit: cover;
+  max-width: 15%;
+  margin: 5px;
+}
