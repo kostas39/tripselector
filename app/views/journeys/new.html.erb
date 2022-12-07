@@ -1,11 +1,12 @@
-<h1>Create a new journey </h1>
+<div class="form-container">
+  <h1>Create a new journey </h1>
 
-<%= simple_form_for(@journey) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "New Zealand"] %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.input :tag, collection: ["Adventurous", "Food", "Hidden gem", "Historical", "Moutain", "Museums", "Romantic", "Sea", "Sunny", "Touristy"] %>
-  <%= f.input :comment %>
-  <%= f.submit %>
-<% end %>
+  <%= simple_form_for(@journey) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "New Zealand"] %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.input :tag, collection: ["Adventurous", "Food", "Hidden gem", "Historical", "Moutain", "Museums", "Romantic", "Sea", "Sunny", "Touristy"] %>
+    <%= f.submit %>
+  <% end %>
+</div>
