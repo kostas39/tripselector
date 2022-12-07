@@ -5,7 +5,7 @@ class City < ApplicationRecord
   # belongs_to :city_journey
 
 
-  has_many :city_journeys
+  has_many :city_journeys, dependent: :destroy
   has_many :journeys, through: :city_journeys
 
   validates :latitude,
