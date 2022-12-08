@@ -22,7 +22,8 @@
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :bio,
-                hint: "Add a bio to your profile",
+                hint: "Add a bio to your profile" %>
+    <%= f.input :photo, as: :file %>
   </div>
 
   <div class="form-actions">
