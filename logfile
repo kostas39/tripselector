@@ -1,0 +1,7 @@
+2022-12-08 10:43:52.726 GMT [18836] LOG:  starting PostgreSQL 14.5 (Homebrew) on x86_64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.102), 64-bit
+2022-12-08 10:43:52.730 GMT [18836] LOG:  listening on IPv6 address "::1", port 5432
+2022-12-08 10:43:52.730 GMT [18836] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-12-08 10:43:52.731 GMT [18836] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-12-08 10:43:52.739 GMT [18837] LOG:  database system was shut down at 2022-12-08 10:43:20 GMT
+2022-12-08 10:43:52.750 GMT [18836] LOG:  database system is ready to accept connections
+2022-12-08 10:44:03.849 GMT [18891] FATAL:  database "tripselector_development" does not exist
