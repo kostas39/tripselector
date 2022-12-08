@@ -22,14 +22,15 @@
   </div>
   <div style="width: 50%">
     <div>
-      <%= link_to "Take me for another trip", new_journey_path, class:"trip-btn-cust" %>
-      <%= link_to "Generate new trip", new_journey_path, class:"trip-btn-cust" %>
+      <% if current_user.journeys.last.id == @journey.id %>
+      <%= button_to "Not happy? Try again", journeys_create_new_path, method: :post , class:"trip-btn-cust"%>
+      <% end %>
     </div>
     <div style="height: 600px; position: sticky; top: 7rem"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-      class = "mb-5 mt-4">
+      class = "mb-5 mt-4  ">
     </div>
   </div>
 </div>
