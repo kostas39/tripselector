@@ -7,42 +7,63 @@
 <%# <% current_journeys = [] %>
 <%# <% future_journeys = [] %>
 <div class="card-deck">
-  <div class="card bg-light p-3 m-3">
+  <div class="px-5 mt-3">
     <h1>Past Journeys</h1>
-    <% @journeys.each do |journey| %>
-    <% if journey.end_date < Date.today %>
-    <p>Name: <%= link_to "#{journey.name}", journey_path(journey) %></p>
-    <p>Comment: <%= journey.comment %></p>
-    <p>Tag: <%= journey.tag %></p>
-    <p>Start date: <%= journey.start_date %></p>
-    <p>End date: <%= journey.end_date %></p>
-    <p>=========================</p>
-    <% end %>
-    <% end %>
   </div>
-  <div class="card bg-light p-3 m-3">
-    <h1>Current Journeys</h1>
-    <% @journeys.each do |journey| %>
-    <% if journey.start_date < Date.today && journey.end_date > Date.today %>
-    <p>Name: <%= link_to "#{journey.name}", journey_path(journey) %></p>
-    <p>Comment: <%= journey.comment %></p>
-    <p>Tag: <%= journey.tag %></p>
-    <p>Start date: <%= journey.start_date %></p>
-    <p>End date: <%= journey.end_date %></p>
-    <p>=========================</p>
-    <% end %>
-    <% end %>
+    <div class="d-flex flex-wrap justify-content-around bg-light p-3 m-3 border">
+      <% @journeys.each do |journey| %>
+      <% if journey.end_date < Date.today %>
+        <div class="card shadow p-3 mb-5 bg-white rounded-lg" style="width: 18rem;">
+          <%= image_tag "#{journey.city_journeys.first.city.name}.jpg" %>
+            <div class="card-body text-center">
+              <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
+              <p><%= "#{journey.tag}" %></p>
+              <div class="dates">
+                <p><%= journey.start_date.strftime("%a %d %B %Y") %></p>
+                <p><%= journey.end_date.strftime("%a %d %B %Y") %></p>
+              </div>
+            </div>
+        </div>
+      <% end %>
+      <% end %>
+    </div>
+    <div class="px-5 mt-3">
+      <h1>Current Journeys</h1>
+    </div>
+    <div class="d-flex justify-content-around bg-light p-3 m-3 border">
+      <% @journeys.each do |journey| %>
+      <% if journey.start_date <= Date.today && journey.end_date > Date.today %>
+        <div class="card shadow p-3 mb-5 bg-white rounded-lg" style="width: 18rem;">
+          <%= image_tag "#{journey.city_journeys.first.city.name}.jpg" %>
+            <div class="card-body text-center">
+              <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
+              <p><%= journey.tag %></p>
+              <div class="dates">
+                <p><%= journey.start_date.strftime("%a %d %B %Y") %></p>
+                <p><%= journey.end_date.strftime("%a %d %B %Y") %></p>
+              </div>
+            </div>
+          </div>
+      <% end %>
+      <% end %>
   </div>
-  <div class="card bg-light p-3 m-3">
+  <div class="px-5 mt-3">
     <h1>Future Journeys</h1>
+  </div>
+  <div class="d-flex justify-content-around bg-light p-3 m-3 border">
     <% @journeys.each do |journey| %>
     <% if journey.start_date > Date.today %>
-    <p>Name: <%= link_to "#{journey.name}", journey_path(journey) %></p>
-    <p>comment: <%= journey.comment %></p>
-    <p>Tag: <%= journey.tag %></p>
-    <p>Start date: <%= journey.start_date %></p>
-    <p>End date: <%= journey.end_date %></p>
-    <p>=========================</p>
+      <div class="card shadow p-3 mb-5 bg-white rounded-lg" style="width: 18rem;">
+        <%= image_tag "#{journey.city_journeys.first.city.name}.jpg" %>
+          <div class="card-body text-center">
+            <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
+            <p><%= journey.tag %></p>
+            <div class="dates">
+              <p><%= journey.start_date.strftime("%a %d %B %Y") %></p>
+              <p><%= journey.end_date.strftime("%a %d %B %Y") %></p>
+            </div>
+          </div>
+        </div>
     <% end %>
     <% end %>
   </div>
