@@ -2,16 +2,31 @@
 
 .home-banner {
   height:500px;
-  background-image: url("home_banner.jpg");
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-content:center;
+  // background-image: url("home_banner.jpg");
+  background:
+        /* top, transparent black, faked with gradient */
+        linear-gradient(
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        /* bottom, image */
+        url("home_banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: white;
-  margin-bottom: 2%;
-  vertical-align: middle;
-  a {
-    text-decoration: none;
-    color:white;
+  color:$white;
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    text-rendering: optimizelegibility;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    height: min-content;
   }
 }
 

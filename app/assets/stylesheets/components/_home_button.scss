@@ -1,0 +1,13 @@
+.home-btn-cust {
+  text-decoration: none;
+  background-color: $button;
+  padding:32px;
+  border-radius: 10px;
+  color:$white;
+  margin: 16px;
+}
+.home-btn-cust:hover {
+  background-color: $button-hover;
+  color:$black;
+  transition: 0.2s ease;
+}
