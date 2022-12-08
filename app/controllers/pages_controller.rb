@@ -9,4 +9,8 @@ class PagesController < ApplicationController
     # show past present and future journeys
     @journeys = current_user.journeys
   end
+
+  def profile
+    @user = current_user
+  end
 end
