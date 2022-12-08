@@ -20,10 +20,16 @@
     <% end %>
     <h4> Enjoy your trip </h4>
   </div>
-  <div style="width: 50%; height: 600px; position: sticky; top: 6rem"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-    class = "mb-5 mt-5">
+  <div style="width: 50%">
+    <div>
+      <%= link_to "Take me for another trip", new_journey_path, class:"trip-btn-cust" %>
+      <%= link_to "Generate new trip", new_journey_path, class:"trip-btn-cust" %>
+    </div>
+    <div style="height: 600px; position: sticky; top: 7rem"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+      class = "mb-5 mt-4">
+    </div>
   </div>
 </div>
