@@ -4,8 +4,7 @@
 
 <div class="page-container">
   <div>
-    <h4 class="mb-4"> <%= "This #{@journey.tag} journey starts on #{@journey.start_date.strftime("%a %d %B")} in #{@journey.city_journeys.first.city.name} and ends on #{@journey.end_date.strftime("%a %d %B %Y")} in #{@journey.city_journeys.last.city.name}." %> </h4>
-    <p> It will take you through </p>
+    <h4 class="mb-4"> <%= "This journey starts on #{@journey.start_date.strftime("%a %d %B")} in #{@journey.city_journeys.first.city.name} and ends on #{@journey.end_date.strftime("%a %d %B")} in #{@journey.city_journeys.last.city.name}." %> </h4>
     <% @journey.city_journeys.each do |city_journey| %>
       <div class="city-journey-card">
         <%= image_tag("#{city_journey.city.name}.jpg", :class => "city-card-picture") %>
