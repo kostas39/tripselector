@@ -177,10 +177,9 @@ saint_malo = City.create(name: "Saint-Malo",
                          tags: "Sea, Food",
                          next_cities: %w[Paris La-Rochelle Nantes Versailles Ars-en-Ré])
 
-
 Journey1 = Journey.create(user: User.first, start_date: Date.today, end_date: Date.tomorrow, tag: "romantic", comment: "our honeymoon")
 
-cj = CityJourney.create(city:City.last, journey:Journey.last, start_date: Date.today, end_date: Date.tomorrow)
+# cj = CityJourney.create(city:City.last, journey:Journey.last, start_date: Date.today, end_date: Date.tomorrow)
 
 notre_dame = Activity.create(name: "Notre-Dame",
                              tags: "Historical, Touristy",
