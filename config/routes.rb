@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   resources :cities, only:[:index, :show]
 
   get 'dashboard', to: 'pages#dashboard'
+  get 'profile', to: 'pages#profile'
 end
