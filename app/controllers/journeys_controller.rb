@@ -75,7 +75,20 @@ class JourneysController < ApplicationController
         next_city_name = nil
         cj_saved_city_names.each do |city_name|
           while next_city_name.nil? || next_city_name == city_name
-            next_city_name = previous_city_journey.city.next_cities.sample.strip
+            next_cities = []
+            tagged_next_cities = []
+            previous_city_journey.city.next_cities.each do |city|
+              next_cities << City.find_by_name(city)
+            end
+            next_cities.each do |city|
+              next_city_tags_array = city.tags.downcase.split(", ") #takes the tags of the city in the next cities list
+              next_city_tags_array.each do |tag|
+                if tag == @journeyParams[:tag].downcase #compares city tags with journey tag
+                  tagged_next_cities << city
+                end
+              end
+            end
+            next_city_name = tagged_next_cities.sample.name
           end
         end
         next_city = City.find_by_name(next_city_name)
@@ -83,7 +96,6 @@ class JourneysController < ApplicationController
                                        journey: @journey,
                                        start_date: previous_city_journey.end_date,
                                        end_date: previous_city_journey.end_date + 3)
-
         if city_journey.save
           city_journey_list << city_journey
         else

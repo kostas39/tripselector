@@ -18,14 +18,14 @@ paris = City.create(name: "Paris",
                     next_cities: %w[Versailles Lyon Marseille La-Rochelle Lille Chambéry Nantes Toulouse Bordeaux Aubenas Ars-en-Ré Strasbourg Grenoble Annecy Biarritz Saint-Malo])
 
 lyon = City.create(name: "Lyon",
-                  description: "",
-                  latitude: 45.7578137,
-                  longitude: 4.8320114,
-                  country: "France",
-                  continent: "Europe",
-                  region: "Auvergne Rhone Alpes",
-                  tags: "Major city, Food, Mountain",
-                  next_cities: %w[Paris Marseille Chambéry Versailles Aubenas Grenoble Annecy])
+                   description: "",
+                   latitude: 45.7578137,
+                   longitude: 4.8320114,
+                   country: "France",
+                   continent: "Europe",
+                   region: "Auvergne Rhone Alpes",
+                   tags: "Major city, Food, Mountain",
+                   next_cities: %w[Paris Marseille Chambéry Versailles Aubenas Grenoble Annecy])
 
 marseille = City.create(name: "Marseille",
                         description: "",
@@ -38,134 +38,134 @@ marseille = City.create(name: "Marseille",
                         next_cities: %w[Paris Lyon Chambéry Versailles Toulouse Grenoble Annecy Bordeaux])
 
 la_rochelle = City.create(name: "La-Rochelle",
-            description: "",
-            latitude: 46.1591126,
-            longitude: -1.1520434,
-            country: "France",
-            continent: "Europe",
-            region: "Nouvelle Aquitaine",
-            tags: "Sea",
-            next_cities: %w[Paris Nantes Versailles Toulouse Bordeaux Ars-en-Ré Biarritz Saint-Malo])
+                          description: "",
+                          latitude: 46.1591126,
+                          longitude: -1.1520434,
+                          country: "France",
+                          continent: "Europe",
+                          region: "Nouvelle Aquitaine",
+                          tags: "Sea",
+                          next_cities: %w[Paris Nantes Versailles Toulouse Bordeaux Biarritz Saint-Malo])
 
 lille = City.create(name: "Lille",
-            description: "",
-            latitude: 50.6365654,
-            longitude: 3.0635282,
-            country: "France",
-            continent: "Europe",
-            region: "Haut de France",
-            tags: "Major city, Food",
-            next_cities: %w[Paris Versailles Strasbourg])
+                    description: "",
+                    latitude: 50.6365654,
+                    longitude: 3.0635282,
+                    country: "France",
+                    continent: "Europe",
+                    region: "Haut de France",
+                    tags: "Major city, Food",
+                    next_cities: %w[Paris Versailles Strasbourg])
 
 chambery = City.create(name: "Chambéry",
-            description: "",
-            latitude: 45.5662672,
-            longitude: 5.9203636,
-            country: "France",
-            continent: "Europe",
-            region: "Auvergne Rhone Alpes",
-            tags: "Mountain",
-            next_cities: %w[Paris Lyon Marseille Versailles Aubenas Grenoble Annecy])
+                       description: "",
+                       latitude: 45.5662672,
+                       longitude: 5.9203636,
+                       country: "France",
+                       continent: "Europe",
+                       region: "Auvergne Rhone Alpes",
+                       tags: "Mountain",
+                       next_cities: %w[Paris Lyon Marseille Versailles Aubenas Grenoble Annecy])
 
 nantes = City.create(name: "Nantes",
-            description: "",
-            latitude: 47.2186371,
-            longitude: -1.5541362,
-            country: "France",
-            continent: "Europe",
-            region: "Loire Atlantique",
-            tags: "Major city, Sea",
-            next_cities: %w[Paris La-Rochelle Versailles Toulouse Ars-en-Ré Biarritz Saint-Malo])
+                     description: "",
+                     latitude: 47.2186371,
+                     longitude: -1.5541362,
+                     country: "France",
+                     continent: "Europe",
+                     region: "Loire Atlantique",
+                     tags: "Major city, Sea",
+                     next_cities: %w[Paris La-Rochelle Versailles Toulouse Ars-en-Ré Biarritz Saint-Malo])
 
 versailles = City.create(name: "Versailles",
-            description: "",
-            latitude: 48.8035403,
-            longitude: 2.1266886,
-            country: "France",
-            continent: "Europe",
-            region: "Ile de France",
-            tags: "Major city",
-            next_cities: %w[Paris Lyon Marseille La-Rochelle Lille Chambéry Nantes Toulouse Bordeaux Aubenas Ars-en-Ré Strasbourg Grenoble Annecy Biarritz Saint-Malo])
+                         description: "",
+                         latitude: 48.8035403,
+                         longitude: 2.1266886,
+                         country: "France",
+                         continent: "Europe",
+                         region: "Ile de France",
+                         tags: "Major city",
+                         next_cities: %w[Paris Lyon Marseille La-Rochelle Lille Chambéry Nantes Toulouse Bordeaux Aubenas Ars-en-Ré Strasbourg Grenoble Annecy Biarritz Saint-Malo])
 
 toulouse = City.create(name: "Toulouse",
-            description: "",
-            latitude: 43.6044622,
-            longitude: 1.4442469,
-            country: "France",
-            continent: "Europe",
-            region: "Occitanie",
-            tags: "Major city, Food",
-            next_cities: %w[Paris Marseille La-Rochelle Nantes Versailles Bordeaux Ars-en-Ré Biarritz])
+                       description: "",
+                       latitude: 43.6044622,
+                       longitude: 1.4442469,
+                       country: "France",
+                       continent: "Europe",
+                       region: "Occitanie",
+                       tags: "Major city, Food",
+                       next_cities: %w[Paris Marseille La-Rochelle Nantes Versailles Bordeaux Ars-en-Ré Biarritz])
 
 bordeaux = City.create(name: "Bordeaux",
-            description: "",
-            latitude: 44.841225,
-            longitude: -0.5800364,
-            country: "France",
-            continent: "Europe",
-            region: "Nouvelle Aquitaine",
-            tags: "Major city, Sea",
-            next_cities: %w[Paris La-Rochelle Versailles Toulouse Ars-en-Ré Biarritz])
+                       description: "",
+                       latitude: 44.841225,
+                       longitude: -0.5800364,
+                       country: "France",
+                       continent: "Europe",
+                       region: "Nouvelle Aquitaine",
+                       tags: "Major city, Sea",
+                       next_cities: %w[Paris La-Rochelle Versailles Toulouse Ars-en-Ré Biarritz])
 
 aubenas = City.create(name: "Aubenas",
-            description: "",
-            latitude: 44.6205476,
-            longitude: 4.3902399,
-            country: "France",
-            continent: "Europe",
-            region: "Auvergne Rhone Alpes",
-            tags: "Mountain",
-            next_cities: %w[Paris Lyon Chambéry Versailles Grenoble Annecy])
+                      description: "",
+                      latitude: 44.6205476,
+                      longitude: 4.3902399,
+                      country: "France",
+                      continent: "Europe",
+                      region: "Auvergne Rhone Alpes",
+                      tags: "Mountain",
+                      next_cities: %w[Paris Lyon Chambéry Versailles Grenoble Annecy])
 
 ars_en_re = City.create(name: "Ars-en-Ré",
-            description: "",
-            latitude: 46.208056,
-            longitude: -1.515833,
-            country: "France",
-            continent: "Europe",
-            region: "Nouvelle Aquitaine",
-            tags: "Sea",
-            next_cities: %w[Paris La-Rochelle Nantes Versailles Toulouse Bordeaux Biarritz Saint-Malo])
+                        description: "",
+                        latitude: 46.208056,
+                        longitude: -1.515833,
+                        country: "France",
+                        continent: "Europe",
+                        region: "Nouvelle Aquitaine",
+                        tags: "Sea",
+                        next_cities: %w[La-Rochelle])
 
 strasbourg = City.create(name: "Strasbourg",
-            description: "",
-            latitude: 48.584614,
-            longitude: 7.7507127,
-            country: "France",
-            continent: "Europe",
-            region: "Grand Est",
-            tags: "Major city, Food",
-            next_cities: %w[Paris Lille Versailles])
+                         description: "",
+                         latitude: 48.584614,
+                         longitude: 7.7507127,
+                         country: "France",
+                         continent: "Europe",
+                         region: "Grand Est",
+                         tags: "Major city, Food",
+                         next_cities: %w[Paris Lille Versailles])
 
 grenoble = City.create(name: "Grenoble",
-            description: "",
-            latitude: 45.1875602,
-            longitude: 5.7357819,
-            country: "France",
-            continent: "Europe",
-            region: "Auvergne Rhone Alpes",
-            tags: "Mountain",
-            next_cities: %w[Paris Lyon Marseille Chambéry Versailles Aubenas Annecy])
+                       description: "",
+                       latitude: 45.1875602,
+                       longitude: 5.7357819,
+                       country: "France",
+                       continent: "Europe",
+                       region: "Auvergne Rhone Alpes",
+                       tags: "Mountain",
+                       next_cities: %w[Paris Lyon Marseille Chambéry Versailles Aubenas Annecy])
 
 annecy = City.create(name: "Annecy",
-            description: "",
-            latitude: 45.8992348,
-            longitude: 6.1288847,
-            country: "France",
-            continent: "Europe",
-            region: "Auvergne Rhone Alpes",
-            tags: "Mountain",
-            next_cities: %w[Paris Lyon Marseille Chambéry Versailles Aubenas Grenoble])
+                     description: "",
+                     latitude: 45.8992348,
+                     longitude: 6.1288847,
+                     country: "France",
+                     continent: "Europe",
+                     region: "Auvergne Rhone Alpes",
+                     tags: "Mountain",
+                     next_cities: %w[Paris Lyon Marseille Chambéry Versailles Aubenas Grenoble])
 
 biarritz = City.create(name: "Biarritz",
-            description: "",
-            latitude: 43.4832523,
-            longitude: -1.5592776,
-            country: "France",
-            continent: "Europe",
-            region: "Nouvelle Aquitaine",
-            tags: "Sea, Food",
-            next_cities: %w[Paris La-Rochelle Nantes Versailles Toulouse Bordeaux Ars-en-Ré Biarritz])
+                       description: "",
+                       latitude: 43.4832523,
+                       longitude: -1.5592776,
+                       country: "France",
+                       continent: "Europe",
+                       region: "Nouvelle Aquitaine",
+                       tags: "Sea, Food",
+                       next_cities: %w[Paris La-Rochelle Nantes Versailles Toulouse Bordeaux Ars-en-Ré Biarritz])
 
 saint_malo = City.create(name: "Saint-Malo",
                          description: "",
@@ -175,7 +175,7 @@ saint_malo = City.create(name: "Saint-Malo",
                          continent: "Europe",
                          region: "Bretagne",
                          tags: "Sea, Food",
-                         next_cities: %w[Paris La Rochelle Nantes Versailles Ars en Ré])
+                         next_cities: %w[Paris La-Rochelle Nantes Versailles Ars-en-Ré])
 
 
 Journey1 = Journey.create(user: User.first, start_date: Date.today, end_date: Date.tomorrow, tag: "romantic", comment: "our honeymoon")
@@ -422,18 +422,18 @@ port_vieux = Activity.create(name: "Port Vieux Beach",
             description: "Little beach but full of love. The sand is always humid and is a nice place to go for a swim in a quiet place.",
             city_id: biarritz.id)
 
-rocher = Activity.create(name: "Rocher de la Vierge",
-              tags: "Mountain",
+remparts = Activity.create(name: "Remparts de Saint Malo",
+              tags: "Sea",
               description: "Tripadvisor Travellers Choice award winner, unparalleled scenary and views",
               city_id: saint_malo.id)
 
-aquarium_biarritz = Activity.create(name: "Aquarium de Biarritz",
-              tags: "Touristy",
+plage_sillon = Activity.create(name: "Sillon Beach",
+              tags: "Sea",
               description: "The aquarium is built into a hill side, and it gives a very natural feeling when you are in the building. There are different levels for each exhibitions, and the sea lion feeding is on the top.",
               city_id: saint_malo.id)
 
-port_vieux = Activity.create(name: "Port Vieux Beach",
-              tags: "Sea, Touristy, Sunny",
+cathedrale_saint_malo = Activity.create(name: "Saint Malo Cathedral",
+              tags: "Historic",
               description: "Little beach but full of love. The sand is always humid and is a nice place to go for a swim in a quiet place.",
               city_id: saint_malo.id)
 
