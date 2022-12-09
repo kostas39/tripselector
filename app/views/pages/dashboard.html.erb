@@ -1,11 +1,4 @@
-<%# compare start dates of journeys  %>
-<%# trip_past? trip_present? trip_future? %>
-<%# All return true or false %>
-<%# move into groups -> previous | present | future %>
 
-<%# <% past_journeys = [] %>
-<%# <% current_journeys = [] %>
-<%# <% future_journeys = [] %>
 <div class="card-deck">
   <div class="px-5 mt-3">
     <h1>Past Journeys</h1>
@@ -19,8 +12,8 @@
               <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
               <p><%= "#{journey.tag}" %></p>
               <div id="dates">
-                <p><%= journey.start_date.strftime("%a %d %B %Y") %></p>
-                <p><%= journey.end_date.strftime("%a %d %B %Y") %></p>
+                <p><%= journey.start_date.strftime("%a %d %B") %></p>
+                <p><%= journey.end_date.strftime("%a %d %B") %></p>
               </div>
             </div>
         </div>
@@ -39,8 +32,8 @@
               <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
               <p><%= journey.tag %></p>
               <div id="dates">
-                <p><%= journey.start_date.strftime("%a %d %B %Y") %></p>
-                <p><%= journey.end_date.strftime("%a %d %B %Y") %></p>
+                <p><%= journey.start_date.strftime("%a %d %B") %></p>
+                <p><%= journey.end_date.strftime("%a %d %B") %></p>
               </div>
             </div>
           </div>
@@ -59,8 +52,8 @@
             <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
             <p><%= journey.tag %></p>
             <div id="dates">
-              <p><%= journey.start_date.strftime("%a %d %B %Y") %></p>
-              <p><%= journey.end_date.strftime("%a %d %B %Y") %></p>
+              <p><%= journey.start_date.strftime("%a %d %B") %></p>
+              <p><%= journey.end_date.strftime("%a %d %B") %></p>
             </div>
           </div>
         </div>
