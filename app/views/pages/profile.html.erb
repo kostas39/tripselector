@@ -1,6 +1,6 @@
 <%# profile image upload %>
 <%# add additional details, bio/favourite destinations etc %>
-<div class="container text-center border">
+<div class="profile-container text-center border">
   <p class="pt-3"><%= "#{@user.username.capitalize}" %>'s profile page</p>
   <div class="ava pt-3">
     <%= cl_image_tag @user.photo.key, height: 200, width: 200, crop: :fill, class: "pfp" %>
