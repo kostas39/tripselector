@@ -7,7 +7,7 @@
       <% @journeys.each do |journey| %>
       <% if journey.end_date < Date.today %>
         <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem;">
-          <%= image_tag "#{journey.city_journeys.first.city.name}.jpg" %>
+          <%= image_tag "#{journey.city_journeys.first.city.name}.jpg", class:"h-50%" %>
           <div class="card-body text-center">
             <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
             <p><%= "#{journey.tag}" %></p>
