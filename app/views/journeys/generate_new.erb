@@ -1,0 +1,12 @@
+<div class="form-container mb-4">
+  <h1 class="mb-4 mt-4"> Let's get on an adventure again </h1>
+
+  <%= simple_form_for @journey, data: { controller: 'flatpickr' } do |f| %>
+    <%= f.input :name, input_html:{value: current_user.journeys.last.name} %>
+    <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "New Zealand"], selected: current_user.journeys.last.country %>
+    <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } }, input_html:{value: current_user.journeys.last.start_date} %>
+    <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" } }, input_html:{value: current_user.journeys.last.end_date} %>
+    <%= f.input :tag, collection: ["Food", "Mountain", "Sea", "Major City"], selected: current_user.journeys.last.tag %>
+    <%= f.submit "Let's try again!" %>
+  <% end %>
+</div>

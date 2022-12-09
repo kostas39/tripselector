@@ -11,3 +11,13 @@
   color:$black;
   transition: 0.2s ease;
 }
+
+.trip-btn-cust {
+  text-decoration: none;
+  background-color: $button;
+  padding:10px;
+  border-radius: 10px;
+  color:$white;
+  margin-bottom: 8px;
+  margin-left: 8px;
+}

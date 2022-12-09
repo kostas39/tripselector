@@ -1,11 +1,4 @@
-<%# compare start dates of journeys  %>
-<%# trip_past? trip_present? trip_future? %>
-<%# All return true or false %>
-<%# move into groups -> previous | present | future %>
 
-<%# <% past_journeys = [] %>
-<%# <% current_journeys = [] %>
-<%# <% future_journeys = [] %>
 <div class="card-deck">
   <div class="px-5 mt-3">
     <h1>Past Journeys</h1>
@@ -18,9 +11,9 @@
             <div class="card-body text-center">
               <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
               <p><%= "#{journey.tag}" %></p>
-              <div class="dates">
-                <p><%= journey.start_date.strftime("%a %d %B %Y") %></p>
-                <p><%= journey.end_date.strftime("%a %d %B %Y") %></p>
+              <div id="dates">
+                <p><%= journey.start_date.strftime("%a %d %B") %></p>
+                <p><%= journey.end_date.strftime("%a %d %B") %></p>
               </div>
             </div>
         </div>
@@ -30,7 +23,7 @@
     <div class="px-5 mt-3">
       <h1>Current Journeys</h1>
     </div>
-    <div class="d-flex justify-content-around bg-light p-3 m-3 border">
+    <div class="d-flex flex-wrap justify-content-around bg-light p-3 m-3 border">
       <% @journeys.each do |journey| %>
       <% if journey.start_date <= Date.today && journey.end_date > Date.today %>
         <div class="card shadow p-3 mb-5 bg-white rounded-lg" style="width: 18rem;">
@@ -38,9 +31,9 @@
             <div class="card-body text-center">
               <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
               <p><%= journey.tag %></p>
-              <div class="dates">
-                <p><%= journey.start_date.strftime("%a %d %B %Y") %></p>
-                <p><%= journey.end_date.strftime("%a %d %B %Y") %></p>
+              <div id="dates">
+                <p><%= journey.start_date.strftime("%a %d %B") %></p>
+                <p><%= journey.end_date.strftime("%a %d %B") %></p>
               </div>
             </div>
           </div>
@@ -50,7 +43,7 @@
   <div class="px-5 mt-3">
     <h1>Future Journeys</h1>
   </div>
-  <div class="d-flex justify-content-around bg-light p-3 m-3 border">
+  <div class="d-flex flex-wrap justify-content-around bg-light p-3 m-3 border">
     <% @journeys.each do |journey| %>
     <% if journey.start_date > Date.today %>
       <div class="card shadow p-3 mb-5 bg-white rounded-lg" style="width: 18rem;">
@@ -58,9 +51,9 @@
           <div class="card-body text-center">
             <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
             <p><%= journey.tag %></p>
-            <div class="dates">
-              <p><%= journey.start_date.strftime("%a %d %B %Y") %></p>
-              <p><%= journey.end_date.strftime("%a %d %B %Y") %></p>
+            <div id="dates">
+              <p><%= journey.start_date.strftime("%a %d %B") %></p>
+              <p><%= journey.end_date.strftime("%a %d %B") %></p>
             </div>
           </div>
         </div>
