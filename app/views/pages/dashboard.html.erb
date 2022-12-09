@@ -6,7 +6,7 @@
     <div class="bg-light p-3 m-3 border cards-container">
       <% @journeys.each do |journey| %>
       <% if journey.end_date < Date.today %>
-        <div class="card shadow p-3 mb-5 bg-white rounded-lg" style="width: 18rem;">
+        <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem;">
           <%= image_tag "#{journey.city_journeys.first.city.name}.jpg" %>
             <div class="card-body text-center">
               <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
@@ -26,7 +26,7 @@
     <div class="bg-light p-3 m-3 border cards-container">
       <% @journeys.each do |journey| %>
       <% if journey.start_date <= Date.today && journey.end_date > Date.today %>
-        <div class="card shadow p-3 mb-5 bg-white rounded-lg" style="width: 18rem;">
+        <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem;">
           <%= image_tag "#{journey.city_journeys.first.city.name}.jpg" %>
             <div class="card-body text-center">
               <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
@@ -46,7 +46,7 @@
   <div class="bg-light p-3 m-3 border cards-container">
     <% @journeys.each do |journey| %>
     <% if journey.start_date > Date.today %>
-      <div class="card shadow p-3 mb-5 bg-white rounded-lg" style="width: 18rem;">
+      <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem;">
         <%= image_tag "#{journey.city_journeys.first.city.name}.jpg" %>
           <div class="card-body text-center">
             <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
