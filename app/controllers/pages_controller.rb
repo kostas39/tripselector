@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def dashboard
     # show past present and future journeys
-    @journeys = current_user.journeys
+    @journeys = current_user.journeys.sort_by(&:start_date)
   end
 
   def profile
