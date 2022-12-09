@@ -44,16 +44,16 @@
   <div class="bg-light p-3 m-3 border cards-container">
     <% @journeys.each do |journey| %>
     <% if journey.start_date > Date.today %>
-      <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem;">
+      <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem">
         <%= image_tag "#{journey.city_journeys.first.city.name}.jpg" %>
-          <div class="card-body text-center">
-            <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
-            <p><%= journey.tag %></p>
-            <div id="dates">
-              <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %></p>
-            </div>
+        <div class="card-body text-center">
+          <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
+          <p><%= journey.tag %></p>
+          <div id="dates">
+            <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %></p>
           </div>
         </div>
+      </div>
     <% end %>
     <% end %>
   </div>
