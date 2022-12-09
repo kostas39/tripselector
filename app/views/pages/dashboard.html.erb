@@ -1,9 +1,9 @@
 
-<div class="card-deck">
+<div class="card-deck card-page-container">
   <div class="px-5 mt-3">
     <h1>Past Journeys</h1>
   </div>
-    <div class="d-flex flex-wrap justify-content-around bg-light p-3 m-3 border">
+    <div class="bg-light p-3 m-3 border cards-container">
       <% @journeys.each do |journey| %>
       <% if journey.end_date < Date.today %>
         <div class="card shadow p-3 mb-5 bg-white rounded-lg" style="width: 18rem;">
@@ -23,7 +23,7 @@
     <div class="px-5 mt-3">
       <h1>Current Journeys</h1>
     </div>
-    <div class="d-flex flex-wrap justify-content-around bg-light p-3 m-3 border">
+    <div class="bg-light p-3 m-3 border cards-container">
       <% @journeys.each do |journey| %>
       <% if journey.start_date <= Date.today && journey.end_date > Date.today %>
         <div class="card shadow p-3 mb-5 bg-white rounded-lg" style="width: 18rem;">
@@ -43,7 +43,7 @@
   <div class="px-5 mt-3">
     <h1>Future Journeys</h1>
   </div>
-  <div class="d-flex flex-wrap justify-content-around bg-light p-3 m-3 border">
+  <div class="bg-light p-3 m-3 border cards-container">
     <% @journeys.each do |journey| %>
     <% if journey.start_date > Date.today %>
       <div class="card shadow p-3 mb-5 bg-white rounded-lg" style="width: 18rem;">
