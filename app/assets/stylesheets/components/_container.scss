@@ -3,3 +3,9 @@
   margin: auto;
   display: flex;
 }
+
+.body_container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
