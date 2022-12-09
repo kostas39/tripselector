@@ -5,3 +5,39 @@
 2022-12-08 10:43:52.739 GMT [18837] LOG:  database system was shut down at 2022-12-08 10:43:20 GMT
 2022-12-08 10:43:52.750 GMT [18836] LOG:  database system is ready to accept connections
 2022-12-08 10:44:03.849 GMT [18891] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:29:05.077 GMT [96536] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:29:05.077 GMT [96536] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 10:30:05.095 GMT [97318] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:30:05.095 GMT [97318] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 10:31:05.089 GMT [97472] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:31:05.089 GMT [97472] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 10:32:05.103 GMT [97591] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:32:05.103 GMT [97591] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 10:33:05.079 GMT [97709] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:33:05.079 GMT [97709] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 10:34:05.180 GMT [97922] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:34:05.180 GMT [97922] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 10:34:40.666 GMT [98526] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:34:40.666 GMT [98526] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 10:34:50.587 GMT [98547] ERROR:  database "tripselector_development" already exists
+2022-12-09 10:34:50.587 GMT [98547] STATEMENT:  CREATE DATABASE "tripselector_development" ENCODING = 'unicode'
+2022-12-09 10:34:50.623 GMT [98548] ERROR:  database "tripselector_test" already exists
+2022-12-09 10:34:50.623 GMT [98548] STATEMENT:  CREATE DATABASE "tripselector_test" ENCODING = 'unicode'
+2022-12-09 10:34:50.773 GMT [98549] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:34:50.773 GMT [98549] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 10:34:56.967 GMT [98560] ERROR:  database "tripselector_development" already exists
+2022-12-09 10:34:56.967 GMT [98560] STATEMENT:  CREATE DATABASE "tripselector_development" ENCODING = 'unicode'
+2022-12-09 10:34:57.006 GMT [98561] ERROR:  database "tripselector_test" already exists
+2022-12-09 10:34:57.006 GMT [98561] STATEMENT:  CREATE DATABASE "tripselector_test" ENCODING = 'unicode'
+2022-12-09 10:34:57.256 GMT [98562] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:34:57.256 GMT [98562] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 10:35:00.837 GMT [98572] ERROR:  database "tripselector_development" already exists
+2022-12-09 10:35:00.837 GMT [98572] STATEMENT:  CREATE DATABASE "tripselector_development" ENCODING = 'unicode'
+2022-12-09 10:35:00.877 GMT [98573] ERROR:  database "tripselector_test" already exists
+2022-12-09 10:35:00.877 GMT [98573] STATEMENT:  CREATE DATABASE "tripselector_test" ENCODING = 'unicode'
+2022-12-09 10:35:00.932 GMT [98574] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:35:00.932 GMT [98574] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 10:35:05.189 GMT [98586] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:35:05.189 GMT [98586] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 10:35:29.174 GMT [98669] FATAL:  database "tripselector_development" does not exist
+2022-12-09 10:35:29.174 GMT [98669] DETAIL:  The database subdirectory "base/16571" is missing.

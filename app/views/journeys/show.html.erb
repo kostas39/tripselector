@@ -18,19 +18,19 @@
         </div>
       </div>
     <% end %>
-    <h4> Enjoy your trip </h4>
+    <h4 class="ml-2 p-3"> Enjoy your trip! </h4>
   </div>
   <div style="width: 50%">
     <div>
       <% if current_user.journeys.last.id == @journey.id %>
-      <%= button_to "Not happy? Try again", journeys_create_new_path, method: :post , class:"trip-btn-cust"%>
+      <%= button_to "Not happy? Try again", journeys_create_new_path, method: :post , class:"btn trip-btn-cust"%>
       <% end %>
     </div>
-    <div style="height: 600px; position: sticky; top: 7rem"
+    <div style="height: 600px; position: sticky; top: 12rem;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-      class = "mb-5 mt-4  ">
+      class = "mb-5 mt-4 mapboxgl-popup">
     </div>
   </div>
 </div>
