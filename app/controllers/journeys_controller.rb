@@ -7,6 +7,7 @@ class JourneysController < ApplicationController
   def show
     @journey = Journey.find(params[:id])
     @cities = @journey.cities
+    @city_journeys = @journey.city_journeys.sort_by(&:start_date)
 
     @markers = @cities.geocoded.map do |city|
       {

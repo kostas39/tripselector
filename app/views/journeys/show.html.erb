@@ -4,8 +4,8 @@
 
 <div class="page-container">
   <div>
-    <h4 class="mb-4"> <%= "This journey starts on #{@journey.start_date.strftime("%a %d %B")} in #{@journey.city_journeys.first.city.name} and ends on #{@journey.end_date.strftime("%a %d %B")} in #{@journey.city_journeys.last.city.name}." %> </h4>
-    <% @journey.city_journeys.each do |city_journey| %>
+    <h4 class="mb-4"> <%= "This journey starts on #{@city_journeys.first.start_date.strftime("%a %d %B")} in #{@city_journeys.first.city.name} and ends on #{@city_journeys.last.end_date.strftime("%a %d %B")} in #{@city_journeys.last.city.name}." %> </h4>
+    <% @city_journeys.each do |city_journey| %>
       <%= render "city_journey_card", city_journey: city_journey %>
     <% end %>
 
