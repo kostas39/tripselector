@@ -4,11 +4,9 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["infos", "form", "card"]
   connect() {
-    console.log("Hello edit")
   }
 
   displayForm() {
-    console.log("Hello form")
     this.infosTarget.classList.add("d-none")
     this.formTarget.classList.remove("d-none")
   }
@@ -23,8 +21,8 @@ export default class extends Controller {
     })
       .then(response => response.text())
       .then((data) => {
-        console.log(data)
         this.cardTarget.outerHTML = data
       })
+
   }
 }

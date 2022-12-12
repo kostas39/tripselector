@@ -7,7 +7,7 @@
         <li> <strong> <%= activity.name %> </strong> <%= ": #{activity.description}" %> </li>
       </ul>
     <% end %>
-    <button aria-label="Edit stop">
+    <button aria-label="Edit stop" class="btn trip-btn-cust">
       <i class="fa-solid fa-pen fa-xs ml-2" data-action="click->edit-journey#displayForm"></i>
     </button>
   </div>
@@ -20,9 +20,8 @@
       }
     } do |f|
     %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.association :city %>
+    <%= f.input :start_date %> <%= f.input :end_date %>
+    <%= f.association :city, collection: City.order("name") %>
     <%= f.submit "Update journey", class: "btn btn-sm btn-primary btn-block mt-2" %>
     <% end %>
 </div>
