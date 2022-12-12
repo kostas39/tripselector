@@ -2,13 +2,20 @@
   <%= image_tag("#{city_journey.city.name}.jpg", :class => "city-card-picture") %>
   <div class="city-journey-info <%= 'd-none' if city_journey.errors.any? %>" data-edit-journey-target="infos">
     <h4> <strong> <%= city_journey.city.name %> </strong> <%= "from #{city_journey.start_date.strftime("%a %d %B")} to #{city_journey.end_date.strftime("%a %d %B")}" %> </h4>
-    <% city_journey.city.activities.each do |activity| %>
-      <ul>
-        <li> <strong> <%= activity.name %> </strong> <%= ": #{activity.description}" %> </li>
-      </ul>
-    <% end %>
+        <div data-controller="read-more" data-read-more-more-text-value="Read more" data-read-more-less-text-value="Read less">
+          <p data-read-more-target="content"></p>
+          <button class="btn link-cust" data-action="read-more#toggle">Activities</button>
+          <template data-read-more-target="full">
+      <% city_journey.city.activities.each do |activity| %>
+        <ul>
+          <li> <strong> <%= activity.name %> </strong> <%= ": #{activity.description}" %> </li>
+        </ul>
+      <% end %>
+          </template>
+        </div>
+
     <button aria-label="Edit stop">
-      <i class="fa-solid fa-pen fa-xs ml-2" data-action="click->edit-journey#displayForm"></i>
+      <i class="fa-solid fa-pen fa-xs ml-2 btn" data-action="click->edit-journey#displayForm"></i>
     </button>
   </div>
   <%= simple_form_for city_journey,
