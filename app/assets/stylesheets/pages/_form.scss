@@ -2,3 +2,11 @@
   margin: auto;
   width: 50%;
 }
+
+.edit-form{
+  display: inline-flex
+}
+
+.edit-form > div {
+  margin: 6px;
+}

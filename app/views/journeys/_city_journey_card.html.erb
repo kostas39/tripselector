@@ -16,11 +16,15 @@
       class: city_journey.errors.any? ? "" : "d-none",
       data: {
         edit_journey_target: "form",
-        action: "submit->edit-journey#update"
+        action: "submit->edit-journey#update",
+        controller: 'flatpickr'
       }
     } do |f|
     %>
-    <%= f.input :start_date %> <%= f.input :end_date %>
+    <div class="edit-form">
+    <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" }, class: "mr-3" } %>
+    <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" }, class: "ml-3" } %>
+    </div>
     <%= f.association :city, collection: City.order("name") %>
     <%= f.submit "Update journey", class: "btn btn-sm btn-primary btn-block mt-2" %>
     <% end %>
