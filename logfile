@@ -41,3 +41,11 @@
 2022-12-09 10:35:05.189 GMT [98586] DETAIL:  The database subdirectory "base/16571" is missing.
 2022-12-09 10:35:29.174 GMT [98669] FATAL:  database "tripselector_development" does not exist
 2022-12-09 10:35:29.174 GMT [98669] DETAIL:  The database subdirectory "base/16571" is missing.
+2022-12-09 14:36:27.484 GMT [44114] LOG:  starting PostgreSQL 14.6 (Homebrew) on x86_64-apple-darwin21.6.0, compiled by Apple clang version 14.0.0 (clang-1400.0.29.202), 64-bit
+2022-12-09 14:36:27.487 GMT [44114] LOG:  listening on IPv6 address "::1", port 5432
+2022-12-09 14:36:27.487 GMT [44114] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-12-09 14:36:27.488 GMT [44114] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-12-09 14:36:27.504 GMT [44115] LOG:  database system was shut down at 2022-12-09 14:36:03 GMT
+2022-12-09 14:36:27.520 GMT [44114] LOG:  database system is ready to accept connections
+2022-12-09 14:36:37.351 GMT [44173] FATAL:  database "tripselector_development" does not exist
+2022-12-09 14:38:33.842 GMT [44517] FATAL:  database "tripselector_development" does not exist

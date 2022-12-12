@@ -1,12 +1,12 @@
 <div class="form-container mb-4">
   <h1 class="mb-4 mt-4">Let's get on an adventure </h1>
-
+<%# implement a button, to autoinput surprise me for all, careful to have seeds for everything tho %>
 <%= simple_form_for @journey, data: { controller: 'flatpickr' } do |f| %>
   <%= f.input :name %>
   <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "New Zealand"] %>
   <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } } %>
   <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" } } %>
-  <%= f.input :tag, collection: ["Food", "Mountain", "Sea", "Major City"] %>
+  <%= f.input :tag, collection: ["Food", "Mountain", "Sea", "Major City", "Surprise Me!"] %>
   <%= f.submit "Let's travel!" %>
 <% end %>
 </div>
