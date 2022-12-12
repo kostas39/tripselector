@@ -1,11 +1,19 @@
 .mapboxgl-popup {
-  z-index: 0;
-  border-radius: 15px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  z-index: 1;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: $body-font;
+}
+
+.marker {
+  background-image: url('droplet.svg');
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
 }
