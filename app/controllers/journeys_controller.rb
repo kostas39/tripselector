@@ -25,7 +25,7 @@ class JourneysController < ApplicationController
       flash.notice = "You must be signed in to create your Journey"
     end
   end
-
+# duplicate of above? \/
   def generate_new
     @journey = Journey.new
     if current_user.nil?
@@ -41,9 +41,10 @@ class JourneysController < ApplicationController
                            end_date: current_user.journeys.last.end_date,
                            tag: current_user.journeys.last.tag)
     @journey.user_id = current_user.id
-    @journeyParams = params[:journey]
+    @journey_params = params[:journey]
     @cities = City.where(country: current_user.journeys.last.country)
     @tagged_cities = []
+    # below iterates through each citie's tags, and compares with the users requested tag
     @cities.each do |city|
       city_tags_array = city.tags.downcase.split(", ") #takes the tags of the city in the desired country
       city_tags_array.each do |tag|
@@ -115,13 +116,19 @@ class JourneysController < ApplicationController
   def create
     @journey = Journey.new(journey_params)
     @journey.user_id = current_user.id
-    @journeyParams = params[:journey]
-    @cities = City.where(country: @journeyParams[:country])
+    @journey_params = params[:journey]
+    # if no tag, @journey.tag = [].sample
+    if @journey_params[:tag] == "Surprise Me!"
+      tags_to_sample = ["Food", "Mountain", "Sea", "Major City"]
+      @journey.tag = tags_to_sample.sample
+      @journey_params[:tag] = @journey.tag
+    end
+    @cities = City.where(country: @journey_params[:country])
     @tagged_cities = []
     @cities.each do |city|
       city_tags_array = city.tags.downcase.split(", ") #takes the tags of the city in the desired country
       city_tags_array.each do |tag|
-        if tag == @journeyParams[:tag].downcase #compares city tags with journey tag
+        if tag == @journey_params[:tag].downcase #compares city tags with journey tag
           @tagged_cities << city
         end
       end
@@ -156,7 +163,7 @@ class JourneysController < ApplicationController
             next_cities.each do |city|
               next_city_tags_array = city.tags.downcase.split(", ") #takes the tags of the city in the next cities list
               next_city_tags_array.each do |tag|
-                if tag == @journeyParams[:tag].downcase #compares city tags with journey tag
+                if tag == @journey_params[:tag].downcase #compares city tags with journey tag
                   tagged_next_cities << city
                 end
               end
