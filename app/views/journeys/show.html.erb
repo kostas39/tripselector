@@ -1,10 +1,10 @@
-<div class="city-banner d-flex justify-content-center align-items-center" style="background-image: url('<%= image_path "#{@journey.city_journeys.first.city.name}.jpg"%>')">
+<div class="city-banner d-flex justify-content-center align-items-center" style="background-image: url('<%= image_path "#{@city_journeys.first.city.name}.jpg"%>')">
   <h1> <%= @journey.name %> </h1>
 </div>
 
 <div class="page-container">
-  <div>
-    <h4 class="mb-4"> <%= "This journey starts on #{@city_journeys.first.start_date.strftime("%a %d %B")} in #{@city_journeys.first.city.name} and ends on #{@city_journeys.last.end_date.strftime("%a %d %B")} in #{@city_journeys.last.city.name}." %> </h4>
+  <div data-controller="edit-journey">
+    <%= render "show_title" %>
     <% @city_journeys.each do |city_journey| %>
       <%= render "city_journey_card", city_journey: city_journey %>
     <% end %>
