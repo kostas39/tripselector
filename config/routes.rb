@@ -21,4 +21,6 @@ Rails.application.routes.draw do
 
   get 'dashboard', to: 'pages#dashboard'
   get 'profile', to: 'pages#profile'
+
+  resources :city_journeys, only:[:update]
 end

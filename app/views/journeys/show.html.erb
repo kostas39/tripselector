@@ -6,18 +6,9 @@
   <div>
     <h4 class="mb-4"> <%= "This journey starts on #{@journey.start_date.strftime("%a %d %B")} in #{@journey.city_journeys.first.city.name} and ends on #{@journey.end_date.strftime("%a %d %B")} in #{@journey.city_journeys.last.city.name}." %> </h4>
     <% @journey.city_journeys.each do |city_journey| %>
-      <div class="city-journey-card">
-        <%= image_tag("#{city_journey.city.name}.jpg", :class => "city-card-picture") %>
-        <div class="city-journey-info">
-          <h4> <strong> <%= city_journey.city.name %> </strong> <%= "from #{city_journey.start_date.strftime("%a %d %B")} to #{city_journey.end_date.strftime("%a %d %B")}" %> </h4>
-          <% city_journey.city.activities.each do |activity| %>
-            <ul>
-              <li> <strong> <%= activity.name %> </strong> <%= ": #{activity.description}" %> </li>
-            </ul>
-          <% end %>
-        </div>
-      </div>
+      <%= render "city_journey_card", city_journey: city_journey %>
     <% end %>
+
     <h4 class="ml-2 p-3"> Enjoy your trip! </h4>
   </div>
   <div style="width: 50%">
@@ -26,11 +17,6 @@
       <%= button_to "Not happy? Try again", journeys_create_new_path, method: :post , class:"btn trip-btn-cust"%>
       <% end %>
     </div>
-    <div style="height: 600px; position: sticky; top: 12rem;"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-      class = "mb-5 mt-4 mapboxgl-popup">
-    </div>
+    <%= render "mapbox" %>
   </div>
 </div>
