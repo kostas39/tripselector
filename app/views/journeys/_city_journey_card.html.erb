@@ -1,28 +1,35 @@
-<div class="city-journey-card" data-controller="edit-journey" data-edit-journey-target="card">
+<div class="city-journey-card" data-edit-journey-target="card">
   <%= image_tag("#{city_journey.city.name}.jpg", :class => "city-card-picture") %>
   <div class="city-journey-info <%= 'd-none' if city_journey.errors.any? %>" data-edit-journey-target="infos">
-    <h4> <strong> <%= city_journey.city.name %> </strong> <%= "from #{city_journey.start_date.strftime("%a %d %B")} to #{city_journey.end_date.strftime("%a %d %B")}" %> </h4>
+    <div class="d-flex justify-content-between">
+      <h4> <strong> <%= city_journey.city.name %> </strong> <%= "from #{city_journey.start_date.strftime("%a %d %B")} to #{city_journey.end_date.strftime("%a %d %B")}" %> </h4>
+      <button aria-label="Edit stop" class="btn trip-btn-cust">
+        <i class="fa-solid fa-pen fa-xs ml-2" data-action="click->edit-journey#displayForm"></i>
+      </button>
+    </div>
     <% city_journey.city.activities.each do |activity| %>
       <ul>
         <li> <strong> <%= activity.name %> </strong> <%= ": #{activity.description}" %> </li>
       </ul>
     <% end %>
-    <button aria-label="Edit stop">
-      <i class="fa-solid fa-pen fa-xs ml-2" data-action="click->edit-journey#displayForm"></i>
-    </button>
   </div>
   <%= simple_form_for city_journey,
     html: {
       class: city_journey.errors.any? ? "" : "d-none",
       data: {
         edit_journey_target: "form",
-        action: "submit->edit-journey#update"
+        action: "submit->edit-journey#update",
+        controller: 'flatpickr'
       }
     } do |f|
     %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.association :city %>
-    <%= f.submit "Update journey", class: "btn btn-sm btn-primary btn-block mt-2" %>
+    <div class="m-3">
+      <div class="edit-form">
+        <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } } %>
+        <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" } } %>
+      </div>
+      <%= f.association :city, collection: City.order("name") %>
+      <%= f.submit "Update journey", class: "btn btn-sm btn-primary btn-block mt-2" %>
+    </div>
     <% end %>
 </div>
