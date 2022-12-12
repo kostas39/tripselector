@@ -1,6 +1,33 @@
 .form-container{
   margin: auto;
   width: 50%;
+  display:flex;
+  margin-top: 2.5%;
+  background-color: white;
+  border-radius: 15px;
+  color:$gray;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.form-img {
+  background-image: url("assets/mountain.jpeg");
+  background-position: center;
+  object-fit:cover;
+  background-size: cover;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.form-inputs {
+  margin: 2.5%;
+}
+
+.adv-heading {
+  margin-top:25%;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: $white;
+  align-self: center;
 }
 
 .edit-form{

@@ -1,12 +1,26 @@
 <div class="form-container mb-4">
-  <h1 class="mb-4 mt-4">Let's get on an adventure </h1>
-<%# implement a button, to autoinput surprise me for all, careful to have seeds for everything tho %>
-<%= simple_form_for @journey, data: { controller: 'flatpickr' } do |f| %>
-  <%= f.input :name %>
-  <%= f.input :country, priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "New Zealand"] %>
-  <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } } %>
-  <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" } } %>
-  <%= f.input :tag, collection: ["Food", "Mountain", "Sea", "Major City", "Surprise Me!"] %>
-  <%= f.submit "Let's travel!" %>
-<% end %>
+<div class="form-img w-100">
+  <h1 class="adv-heading">Let's Go on an Adventure! </h1>
 </div>
+<%# implement a button, to autoinput surprise me for all, careful to have seeds for everything tho %>
+<div class="form-inputs">
+  <%= simple_form_for @journey, data: { controller: 'flatpickr' } do |f| %>
+    <%= f.input :name, label: "Name Your Journey" %>
+    <%= f.input :country, label: "Where to?", priority: [ "France" ], collection: [ "Australia", "Brazil", "France", "New Zealand"] %>
+    <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startDate" } } %>
+    <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endDate" } } %>
+    What style of holiday are you after?
+    <div class="radio-button-container border">
+    <input type="hidden" name="journey[tag]" value="" autocomplete="off">
+    <span class="material-symbols-outlined"><input type="radio" value="Food" name="journey[tag]" id="journey_tag_food" class="material-symbols-outlined">lunch_dining<label class="collection_radio_buttons" for="journey_tag_food">Food</label></span>
+    <span class="material-symbols-outlined"><input type="radio" value="Mountain" name="journey[tag]" id="journey_tag_mountain" class="material-symbols-outlined">landscape<label class="collection_radio_buttons" for="journey_tag_mountain">Mountain</label></span>
+    <span class="material-symbols-outlined"><input type="radio" value="Sea" name="journey[tag]" id="journey_tag_sea" class="material-symbols-outlined">waves<label class="collection_radio_buttons" for="journey_tag_sea">Sea</label></span>
+    <span class="material-symbols-outlined"><input type="radio" value="Major City" name="journey[tag]" id="journey_tag_major_city" class="material-symbols-outlined">location_city<label class="collection_radio_buttons" for="journey_tag_major_city">Major City</label></span>
+    <span id="shuffle-button" class="material-symbols-outlined">autorenew<input type="radio" value="Surprise Me!" name="journey[tag]" id="journey_tag_surprise_me"><label class="material-symbols-outlined collection_radio_buttons" for="journey_tag_surprise_me">Surprise Me!</label></span>
+    </div>
+    <%= f.submit "Let's travel!", class:"btn home-btn-cust bg-success w-100 m-0" %>
+  <% end %>
+</div>
+</div>
+
+  <%# <%= f.collection_radio_buttons :tag, [['Surprise Me!'], ['Mountain']], :first, :last, item_label_class: 'material-symbols-outlined' %>
