@@ -1,12 +1,24 @@
 <%# profile image upload %>
 <%# add additional details, bio/favourite destinations etc %>
-<div class="profile-container text-center border">
-  <p class="pt-3"><%= "#{@user.username.capitalize}" %>'s profile page</p>
+<div class="container text-center border w-50 mt-5 mb-5">
+  <h2 class="pt-3"><%= "#{@user.username.capitalize}" %>'s profile page</h2>
   <div class="ava pt-3">
+  <% if current_user.photo.attached? %>
     <%= cl_image_tag @user.photo.key, height: 200, width: 200, crop: :fill, class: "pfp" %>
+    <% else %>
+    <%= image_tag "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG-Free-Download.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    <% end %>
   </div>
-    <div class="bio pt-5 pb-5 wrap-text">
-      <%= @user.bio %>
-    </div>
-  <%= link_to "Edit profile", "users/edit" %>
+  <div class="bio pt-5 pb-5 wrap-text">
+    <%= @user.bio %>
+  </div>
+  <div>
+    <p class="pb-4">Your favourite destinations are:</p>
+    <li><%= @user.favourite %></li>
+    <li><%= @user.second %></li>
+    <li class="pb-5"><%= @user.third %></li>
+  </div>
+  <div class="edit">
+   <%= link_to "Edit your profile", "users/edit" %>
+  </div>
 </div>
