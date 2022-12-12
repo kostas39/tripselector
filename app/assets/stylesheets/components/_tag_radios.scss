@@ -44,10 +44,3 @@
   width:100%;
   justify-content: center;
 }
-// WARNING: Found no color leading to 4.5:1 contrast ratio against #FD1015...
-//          on line 168:3 of node_modules/bootstrap/scss/_functions.scss, in function `color-contrast`
-//          from line 8:19 of node_modules/bootstrap/scss/helpers/_colored-links.scss, in function `if`
-//          from line 8:16 of node_modules/bootstrap/scss/helpers/_colored-links.scss
-//          from line 3:9 of node_modules/bootstrap/scss/_helpers.scss
-//          from line 47:9 of node_modules/bootstrap/scss/bootstrap.scss
-//          from line 7:9 of app/assets/stylesheets/application.scss
