@@ -7,8 +7,8 @@
       <h4 class="mb-4" data-edit-journey-target="title">
         <%= "This journey starts on #{city_journeys.first.start_date.strftime("%a %d %B")} in #{city_journeys.first.city.name} and ends on #{city_journeys.last.end_date.strftime("%a %d %B")} in #{city_journeys.last.city.name}." %>
       </h4>
-      <% city_journeys.each do |city_journey| %>
-        <%= render "journeys/city_journey_card", city_journey: city_journey %>
+      <% city_journeys.each_with_index do |city_journey, index| %>
+        <%= render "journeys/city_journey_card", city_journey: city_journey, index: index %>
       <% end %>
 
       <h4 class="ml-2 p-3"> Enjoy your trip! </h4>
