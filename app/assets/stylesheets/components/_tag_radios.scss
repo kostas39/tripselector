@@ -1,46 +1,69 @@
-.radio-button-container {
-  width: 100%;
+.category-wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-  margin-top: 16px;
-  height: fit-content;
   border-radius: 5px;
-  border:1px solid #CED4DA;
   overflow: hidden;
-  span:hover {
-    background-color:$button-hover;
-    border-color: $button-hover;
-    transition: 0.2s ease;
-  }
-  span {
-    width: 50%;
-    display:flex;
-    flex-wrap: nowrap;
-    padding: 5px;
-    justify-content: center;
-    border: 0.5px solid #CED4DA;
-    input {
-      opacity: 0;
-      position: fixed;
-      width: 0;
-    }
-    input:checked + label {
-      background-color:$button-hover;
-      color:white;
-      transition: 0.2s ease;
-      border-radius: 5px;
-    }
-    label {
-      font-family: $body-font;
-    }
-  }
+}
 
-  }
+.category-item {
+  width: 100%;
+  border: 0.2px solid #CED4DA;
+}
 
-#shuffle-button {
-  width:100%;
-  justify-content: center;
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.category-selector + label {
+  background-color: #F4F4F4;
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 28px;
+  font-family: $body-font;
+  text-align: center;
+  border: 0.2px solid #CED4DA;
+}
+
+.category-selector:checked + label {
+  background-color:$button-hover;
+  color:white;
+  transition: 0.2s ease;
+}
+.category-selector:hover + label {
+  background-color:$button-hover;
+  color:white;
+  transition: 0.2s ease;
+}
+
+
+#snippet_category_ruby + label {
+  color: #FD1015;
+}
+
+#snippet_category_ruby:checked + label {
+  background-color: #FD1015;
+  border-color: #FD1015;
+}
+
+
+#snippet_category_javascript + label {
+  color: #FFC65A;
+}
+
+#snippet_category_javascript:checked + label {
+  background-color: #FFC65A;
+  border-color: #FFC65A;
+}
+
+
+#snippet_category_css + label {
+  color: #62DDF5;
+}
+
+#snippet_category_css:checked + label {
+  background-color: #62DDF5;
+  border-color: #62DDF5;
 }
