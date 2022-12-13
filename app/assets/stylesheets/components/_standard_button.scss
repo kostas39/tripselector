@@ -1,0 +1,13 @@
+.standard-button {
+  text-decoration: none;
+  background-color: $button;
+  color:$white;
+  border-radius: 10px;
+  transition: 0.2s ease;
+  width: fit-content;
+  font-family: $body-font;
+}
+.standard-button:hover {
+  background-color: $button-hover;
+  color:$black;
+}

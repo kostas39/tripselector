@@ -1,16 +1,14 @@
-.home-btn-cust {
-  text-decoration: none;
-  background-color: $button;
+#home-button {
   padding:32px;
-  border-radius: 10px;
-  color:$white;
-  margin: 16px;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
-.home-btn-cust:hover {
-  background-color: $button-hover;
-  color:$black;
-  transition: 0.2s ease;
-}
+
 
 .trip-btn-cust {
   text-decoration: none;
