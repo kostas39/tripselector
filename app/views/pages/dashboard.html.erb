@@ -7,7 +7,7 @@
     <div class="px-5 mt-3">
       <h1>Past Journeys</h1>
     </div>
-    <% if @journeys.first.end_date > Date.today %>
+    <% if @journeys.first.end_date >= Date.today %>
       <h4> You don't have any past travel with us </h4>
     <% else %>
       <div class="bg-light p-3 m-3 border cards-container">
@@ -40,7 +40,7 @@
     <% else %>
       <div class="bg-light p-3 m-3 border cards-container">
           <% @journeys.each do |journey| %>
-            <% if journey.start_date <= Date.today && journey.end_date > Date.today %>
+            <% if journey.start_date <= Date.today && journey.end_date >= Date.today %>
               <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem;">
                 <%= image_tag "#{journey.city_journeys.first.city.name}.jpg" %>
                 <div class="card-body text-center">
@@ -63,7 +63,7 @@
       <h1>Future Journeys</h1>
     </div>
 
-    <% if @journeys.last.start_date < Date.today %>
+    <% if @journeys.last.start_date <= Date.today %>
         <h4> It seems you don't have any future journeys. It's time to start planning ! </h4>
       <% else %>
     <div class="bg-light p-3 m-3 border cards-container">

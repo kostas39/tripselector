@@ -10,7 +10,7 @@ class PagesController < ApplicationController
     @journeys = current_user.journeys.sort_by(&:start_date)
     @current_journey = []
     @journeys.each do |journey|
-      if journey.start_date <= Date.today && journey.end_date > Date.today
+      if journey.start_date <= Date.today && journey.end_date >= Date.today
         @current_journey << journey
       end
     end
