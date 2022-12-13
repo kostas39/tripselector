@@ -14,6 +14,9 @@
             <div id="dates">
               <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %> </p>
             </div>
+            <div class="delete">
+              <p class="btn btn-danger rounded"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
+            </div>
           </div>
         </div>
       <% end %>
@@ -34,6 +37,9 @@
             <div id="dates">
               <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %> </p>
             </div>
+            <div class="delete">
+              <p class="btn btn-danger rounded"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
+            </div>
           </div>
         </div>
       <% end %>
@@ -52,6 +58,9 @@
           <p><%= journey.tag %></p>
           <div id="dates">
             <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %></p>
+          </div>
+          <div class="delete">
+            <p class="btn btn-danger rounded"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
           </div>
         </div>
       </div>
