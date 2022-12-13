@@ -209,6 +209,7 @@ class JourneysController < ApplicationController
   def destroy
     @journey = Journey.find(params[:id])
     @journey.destroy
+    redirect_to dashboard_path
   end
 
   private
