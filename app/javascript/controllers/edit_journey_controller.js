@@ -2,10 +2,8 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="edit-journey"
 export default class extends Controller {
-  static targets = ["infos", "form", "card", "title"]
+  static targets = ["infos", "form", "card", "title", "show"]
   connect() {
-    console.log(this.titleTarget)
-    console.log(this.cardTarget)
   }
 
   displayForm() {
@@ -24,8 +22,7 @@ export default class extends Controller {
       .then(response => response.text())
 
       .then((data) => {
-        console.log(data)
-        this.cardTarget.outerHTML = data
+        this.showTarget.innerHTML = data
       })
   }
 

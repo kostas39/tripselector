@@ -1,0 +1,19 @@
+
+  <div>
+    <h4 class="mb-4" data-edit-journey-target="title">
+      <%= "This journey starts on #{city_journeys.first.start_date.strftime("%a %d %B")} in #{city_journeys.first.city.name} and ends on #{city_journeys.last.end_date.strftime("%a %d %B")} in #{city_journeys.last.city.name}." %>
+    </h4>
+    <% city_journeys.each do |city_journey| %>
+      <%= render "journeys/city_journey_card", city_journey: city_journey %>
+    <% end %>
+
+    <h4 class="ml-2 p-3"> Enjoy your trip! </h4>
+  </div>
+  <div style="width: 50%">
+    <div>
+      <% if current_user.journeys.last.id == journey.id %>
+      <%= button_to "Not happy? Try again", journeys_create_new_path, method: :post , class:"btn trip-btn-cust"%>
+      <% end %>
+    </div>
+    <%= render "journeys/mapbox", markers: markers %>
+  </div>

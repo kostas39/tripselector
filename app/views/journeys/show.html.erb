@@ -2,21 +2,6 @@
   <h1> <%= @journey.name %> </h1>
 </div>
 
-<div class="page-container">
-  <div data-controller="edit-journey">
-    <%= render "show_title" %>
-    <% @city_journeys.each do |city_journey| %>
-      <%= render "city_journey_card", city_journey: city_journey %>
-    <% end %>
-
-    <h4 class="ml-2 p-3"> Enjoy your trip! </h4>
-  </div>
-  <div style="width: 50%">
-    <div>
-      <% if current_user.journeys.last.id == @journey.id %>
-      <%= button_to "Not happy? Try again", journeys_create_new_path, method: :post , class:"btn trip-btn-cust"%>
-      <% end %>
-    </div>
-    <%= render "mapbox" %>
-  </div>
+<div class="page-container" data-controller="edit-journey" data-edit-journey-target="show">
+  <%= render"show_partial", city_journeys: @city_journeys, journey: @journey, markers: @markers %>
 </div>
