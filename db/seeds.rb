@@ -435,35 +435,116 @@ cathedrale_saint_malo = Activity.create(name: "Saint Malo Cathedral",
                                         tags: "Historic",
                                         description: "This is a beautiful cathedral! Make sure you visit it if you go to Saint-Malo! You get a sense of the history as well the impression of a vibrant, active place of worship.",
                                         city_id: saint_malo.id)
-nantes_journey = Journey.create(name: "Nantes to Ars-en-Ré",
-                                tags: "Sea",
-                                description: "This trip starting in Nantes with the next city to Biarritz and ending in Ars-en-Ré.",
-                                city_id: nantes.id)
-saint_malo_journey = Journey.create(name: "Saint-Malo to Ars-en-Ré",
-                                tags: "Sea",
-                                description: "This trip starting in Saint-Malo and ending in Ars-en-Ré.",
-                                city_id: saint_malo.id)
-aubenas_journey = Journey.create(name: "Aubenas to Annecy",
-                                tags: "Mountain",
-                                description: "This trip starting in Aubenas and ending in Annecy.",
-                                city_id: aubenas.id)
-annecy_journey = Journey.create(name: "Annecy to Grenoble",
-                                tags: "Mountain",
-                                description: "This trip starting at Annecy with first stop at Grenoble second stop is Chambéry and ending at Aubenas.",
-                                city_id: annecy.id)
-strasbourg_journey = Journey.create(name: "Strasbourg to Bordeaux",
-                                tags: "Touristy",
-                                description: "This trip starting at Strasbourg with first stop in Paris second stop at Lyon third stop in Versailles and finishing at Bordeaux.",
-                                city_id: strasbourg.id)
-lille_journey = Journey.create(name: "Lille to Strasbourg",
-                                tags: "Touristy",
-                                description: "This trip starting at Lille with first stop in Versailles second stop in Bordeaux third stop in Paris and ending at Strasbourg.",
-                                city_id: lille.id)
-biarritz_journey = Journey.create(name: "Biarritz to Marseille",
-                                tags: "food",
-                                description: "This trip starting at Biarritz with first stop in Paris and ending in Marseille.",
-                                city_id: biarritz.id)
-saint_journey = Journey.create(name: "Saint-Malo to Paris",
-                                tags: "food",
-                                description: "This trip starting at Saint-Malo with first stop in Paris second stop in Strasbourg third stop in Lille and ending in Paris.",
-                                city_id: saint_malo.id)
+sea_1 = Journey.create(name: "Tour of Britany",
+                       tag: "Sea",
+                       start_date: "03/03/2022",
+                       end_date: "08/08/2022",
+                       country: "France",
+                       user_id: 2)
+sea_2 = Journey.create(name: "French Islands",
+                       tag: "Sea",
+                       start_date: "03/03/2022",
+                       end_date: "08/08/2022",
+                       country: "France",
+                       user_id: 2)
+mountain_1 = Journey.create(name: "Food and kayak",
+                            tag: "Mountain",
+                            start_date: "03/03/2022",
+                            end_date: "08/08/2022",
+                            country: "France",
+                            user_id: 2)
+mountain_2 = Journey.create(name: "Take me down to paradise city",
+                            tag: "Mountain",
+                            start_date: "03/03/2022",
+                            end_date: "08/08/2022",
+                            country: "France",
+                            user_id: 2)
+major_city_1 = Journey.create(name: "No time to lose",
+                              tag: "Major City",
+                              start_date: "03/03/2022",
+                              end_date: "08/08/2022",
+                              country: "France",
+                              user_id: 2)
+major_city_2 = Journey.create(name: "Can French people be nice?",
+                              tag: "Major City",
+                              start_date: "03/03/2022",
+                              end_date: "08/08/2022",
+                              country: "France",
+                              user_id: 2)
+food_1 = Journey.create(name: "Girls, just wanna eat duck",
+                        tag: "Food",
+                        start_date: "03/03/2022",
+                        end_date: "08/08/2022",
+                        country: "France",
+                        user_id: 2)
+food_2 = Journey.create(name: "Marseille bébé",
+                        tag: "Food",
+                        start_date: "03/03/2022",
+                        end_date: "08/08/2022",
+                        country: "France",
+                        user_id: 2)
+
+sea_1_city_1 = CityJourney.create(city_id: saint_malo.id,
+                                  journey_id: sea_1.id,
+                                  start_date: "03/03/2022",
+                                  end_date: "05/08/2022")
+sea_1_city_2 = CityJourney.create(city_id: nantes.id,
+                                  journey_id: sea_1.id,
+                                  start_date: "05/03/2022",
+                                  end_date: "08/08/2022")
+sea_2_city_1 = CityJourney.create(city_id: la_rochelle.id,
+                                  journey_id: sea_2.id,
+                                  start_date: "03/03/2022",
+                                  end_date: "05/08/2022")
+sea_2_city_2 = CityJourney.create(city_id: ars_en_re.id,
+                                  journey_id: sea_2.id,
+                                  start_date: "05/03/2022",
+                                  end_date: "08/08/2022")
+mountain_1_city_1 = CityJourney.create(city_id: aubenas.id,
+                                       journey_id: mountain_1.id,
+                                       start_date: "03/03/2022",
+                                       end_date: "05/08/2022")
+mountain_1_city_2 = CityJourney.create(city_id: lyon.id,
+                                       journey_id: mountain_1.id,
+                                       start_date: "05/03/2022",
+                                       end_date: "08/08/2022")
+mountain_2_city_1 = CityJourney.create(city_id: annecy.id,
+                                       journey_id: mountain_2.id,
+                                       start_date: "03/03/2022",
+                                       end_date: "05/08/2022")
+mountain_2_city_2 = CityJourney.create(city_id: chambery.id,
+                                       journey_id: mountain_2.id,
+                                       start_date: "05/03/2022",
+                                       end_date: "08/08/2022")
+food_1_city_1 = CityJourney.create(city_id: biarritz.id,
+                                   journey_id: food_1.id,
+                                   start_date: "03/03/2022",
+                                   end_date: "05/08/2022")
+food_1_city_2 = CityJourney.create(city_id: bordeaux.id,
+                                   journey_id: food_1.id,
+                                   start_date: "05/03/2022",
+                                   end_date: "08/08/2022")
+food_2_city_1 = CityJourney.create(city_id: marseille.id,
+                                   journey_id: food_2.id,
+                                   start_date: "03/03/2022",
+                                   end_date: "05/08/2022")
+food_2_city_2 = CityJourney.create(city_id: lyon.id,
+                                   journey_id: food_2.id,
+                                   start_date: "05/03/2022",
+                                   end_date: "08/08/2022")
+major_city_1_city_1 = CityJourney.create(city_id: paris.id,
+                                         journey_id: major_city_1.id,
+                                         start_date: "03/03/2022",
+                                         end_date: "05/08/2022")
+major_city_1_city_2 = CityJourney.create(city_id: versailles.id,
+                                         journey_id: major_city_1.id,
+                                         start_date: "05/03/2022",
+                                         end_date: "08/08/2022")
+major_city_2_city_1 = CityJourney.create(city_id: lille.id,
+                                         journey_id: major_city_2.id,
+                                         start_date: "03/03/2022",
+                                         end_date: "05/08/2022")
+major_city_2_city_2 = CityJourney.create(city_id: strasbourg.id,
+                                         journey_id: major_city_2.id,
+                                         start_date: "05/03/2022",
+                                         end_date: "08/08/2022")
