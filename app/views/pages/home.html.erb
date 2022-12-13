@@ -11,8 +11,12 @@
     <p class="fs-4"> Your dream adventure is just a click away! </p>
     <p class="fs-4"> Already <%= CityJourney.count + 256 %> cities visited and <%= Journey.count + 57 %> trips planned with Trips Selector ! <p>
   </div>
-<br>
-<br>
+
+  <div class="align-items-center d-flex flex-column justify-content-center mb-5">
+    <%= link_to "Create your own dream adventure", new_journey_path, class:"btn-ref standard-button mt-5 fs-5", id:"home-button" %>
+    <h1 class="m-5">See Our Featured Trips</h1>
+  </div>
+
   <div class="centered-text d-flex">
     <h3>Trips to the sea</h3>
   </div>
@@ -158,7 +162,5 @@
             </div>
         </div>
     </div>
-  <div class="align-items-center d-flex justify-content-center">
-    <%= link_to "Create your own dream adventure", new_journey_path, class:"home-btn-cust mt-5 fs-5" %>
-  </div>
+
 </div>

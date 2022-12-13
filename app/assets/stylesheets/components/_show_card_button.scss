@@ -1,0 +1,21 @@
+#show-card-button {
+  background-color: transparent;
+  border: 1px solid $button;
+  height: fit-content;
+  width: fit-content;
+  color:$button;
+}
+#show-card-button:hover {
+  background-color: $button-hover;
+  border: 1px solid transparent;
+  color:$black;
+}
+
+.show-button-container {
+  height: 100%;
+  width: 100%;
+  display:flex;
+  justify-content: end;
+  align-content: end;
+  float: right;
+}

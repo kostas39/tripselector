@@ -1,0 +1,12 @@
+#submit-button {
+  background-color: $dark-green;
+  width: 100%;
+  margin: 0;
+  font-size: xx-large;
+  font-family: $body-font;
+  color:white;
+}
+#submit-button:hover {
+  background-color:$green;
+  color:$white;
+}
