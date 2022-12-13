@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_12_091254) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_13_150317) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,6 +50,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_12_091254) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_activities_on_city_id"
+  end
+
+  create_table "bookmarks", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "journey_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["journey_id"], name: "index_bookmarks_on_journey_id"
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
   end
 
   create_table "cities", force: :cascade do |t|
@@ -112,6 +121,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_12_091254) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "activities", "cities"
+  add_foreign_key "bookmarks", "journeys"
+  add_foreign_key "bookmarks", "users"
   add_foreign_key "city_journeys", "cities"
   add_foreign_key "city_journeys", "journeys"
   add_foreign_key "journeys", "users"
