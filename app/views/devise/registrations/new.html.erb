@@ -5,14 +5,16 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-    <%= f.input :first_name,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "first_name" }%>
-      <%= f.input :last_name,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "last_name" }%>
+      <div class="edit-form">
+      <%= f.input :first_name,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "first_name" }%>
+        <%= f.input :last_name,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "last_name" }%>
+      </div>
       <%= f.input :username,
                   required: true,
                   autofocus: true,
@@ -21,14 +23,13 @@
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
+        <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                   input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
+        <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
-
       <div class="form-actions mx-auto">
         <%= f.button :submit, "Sign up" %>
       </div>
@@ -39,5 +40,5 @@
 <% end %>
 
 <div class="mx-auto my-3">
-  <%= link_to "back", "/users/sign_in" %>
+  <%= link_to "Back", "/users/sign_in" %>
 </div>
