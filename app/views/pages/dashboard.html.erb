@@ -1,6 +1,7 @@
 
 <div class="card-deck card-page-container">
-  <% if @journeys.nil? %>
+
+  <% if @journeys.empty? %>
     <h3> You don't have any journeys with us. Start filling your dashboard by planning some trips! </h3>
   <% else %>
     <div class="px-5 mt-3">
