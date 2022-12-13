@@ -5,18 +5,22 @@
 <div class="page-container">
   <div data-controller="edit-journey">
     <%= render "show_title" %>
-    <% @city_journeys.each do |city_journey| %>
-      <%= render "city_journey_card", city_journey: city_journey %>
-    <% end %>
+    <div class="card-map-aligner">
+      <% @city_journeys.each do |city_journey| %>
+        <%= render "city_journey_card", city_journey: city_journey %>
+      <% end %>
+    </div>
 
     <h4 class="ml-2 p-3"> Enjoy your trip! </h4>
   </div>
-  <div style="width: 50%">
-    <div>
+  <div style="width: 50%" class="mt-5">
       <% if current_user.journeys.last.id == @journey.id %>
-      <%= button_to "Not happy? Try again", journeys_create_new_path, method: :post , class:"btn trip-btn-cust"%>
+        <div class="refresh-container d-flex justify-content-center align-items-center">
+          <div class="box-3">
+              <%= button_to raw('<h1>Try Again</h1>'), journeys_create_new_path, method: :post , class:"btn btn-3"%>
+          </div>
+        </div>
       <% end %>
-    </div>
     <%= render "mapbox" %>
   </div>
 </div>
