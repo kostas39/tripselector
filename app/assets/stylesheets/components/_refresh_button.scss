@@ -29,6 +29,9 @@
 	transition: all 0.5s;
 	position: relative;
   border-radius: 10px;
+  h1 {
+    text-shadow: none;
+  }
 }
 .btn-3::before {
 	content: '';
