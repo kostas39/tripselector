@@ -48,3 +48,18 @@
     color: white;
   }
 }
+
+.home-card {
+  border-radius: 8px;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  height: 27rem;
+  background-color: rgb(244, 244, 244);
+  border-width: 1px;
+  border-color: rgba(41, 41, 41, 0.175);
+  border-style: solid;
+}
+
+.home-card-body{
+  padding: 3px;
+}

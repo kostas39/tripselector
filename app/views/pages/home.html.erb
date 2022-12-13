@@ -6,62 +6,52 @@
   <div class="centered-text">
     <h2 class="mb-5"> What do we do at Trips Selector? </h2>
     <p class="fs-4"> Tired of spending days preparing your next holiday? Don’t want to spend a fortune on a travel agency? We got you covered! </p>
-    <p class="fs-4"> Trip Selector allows you to easily create your own trip, depending on the number of days, region or type of holiday you want. </p>
+    <p class="fs-4"> Trips Selector allows you to easily create your own trip, depending on the number of days, region or type of holiday you want. </p>
     <p class="fs-4"> Don’t feel inspired ? You can also browse our selection of unique trip to get you started. </p>
     <p class="fs-4"> Your dream adventure is just a click away! </p>
     <p class="fs-4"> Already <strong> <%= CityJourney.count + 256 %> </strong> cities visited and <strong> <%= Journey.count + 57 %> </strong> trips planned with Trips Selector ! <p>
   </div>
 <br>
 <br>
-  <div class="centered-text d-flex">
-    <h3>Trips to the sea</h3>
-  </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <%= image_tag "Saint-Malo.jpg", class: "card-img-top", width: "400", height: "300"%>
-                    <div class="card-body">
-                      <h5> <%= button_to "Nantes to Ars-en-Ré",journeys_create_new_path, method: :post, class:"btn" %></h5>
-                        <p class="card-text">
-                            This trip starting in Nantes
-                            with the next city to Biarritz
-                            and ending in Ars-en-Ré.
-                        </p>
-                    </div>
-                </div>
+    <h3 class="mb-3">Fancy a swim?</h3>
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="card">
+            <%= image_tag "Saint-Malo.jpg", class: "card-img-top", width: "400", height: "300"%>
+            <div class="card-body">
+              <h6> Saint-Malo to Nantes</h6>
+                <p class="card-text">
+                  For an amazing week in and around Britany, discovering one of the most well preserved region in France.
+                </p>
             </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                   <%= image_tag "La-Rochelle.jpg", class: "card-img-top", width: "400", height: "300" %>
-                    <div class="card-body">
-                        <h5> <%= button_to "Saint-Malo to Ars-en-Ré",journeys_create_new_path, method: :post, class:"btn" %></h5>
-                        <p class="card-text">
-                            This trip starting in Saint-Malo
-                            and ending in Ars-en-Ré.
-                        </p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-lg-6 mb-4">
+          <div class="card">
+             <%= image_tag "La-Rochelle.jpg", class: "card-img-top", width: "400", height: "300" %>
+              <div class="card-body">
+                <h6>La Rochelle to Ars-en-Ré</h6>
+                <p class="card-text">
+                  A seaside weekend wandering the pretiest beaches on the Atlantic coast.
+                </p>
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-
-    <div class="centered-text d-flex">
-    <h3>Trips to the mountain</h3>
-  </div>
-
     <div class="container">
+      <h3 class="mb-3">I want to get high</h3>
         <div class="row">
             <div class="col-lg-6 mb-4">
                 <div class="card">
                     <%= image_tag "Aubenas.jpg", class: "card-img-top", width: "400", height: "300" %>
                     <div class="card-body">
-                        <h5> <%= button_to "Aubenas to Annecy",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <h6> Aubenas to Lyon</h6>
                         <p class="card-text">
-                            This trip starting in Aubenas
-                            and ending in Annecy.
+                            A week in Auvergne, mixing good food in Lyon's bouchons (local restaurants) and some kayaking in France's nicest gorges.
                         </p>
                     </div>
                 </div>
@@ -70,12 +60,9 @@
                 <div class="card">
                     <%= image_tag "Annecy.jpg", class: "card-img-top", width: "400", height: "300" %>
                     <div class="card-body">
-                        <h5> <%= button_to "Annecy to Grenoble",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <h6> Annecy to Chambéry</h6>
                         <p class="card-text">
-                            This trip starting at Annecy
-                            with first stop at Grenoble
-                            second stop is Chambéry
-                            and ending at Aubenas.
+                            A week-end near the 2 biggest and wildest lakes in France. Skiing is also on the menu !
                         </p>
                     </div>
                 </div>
@@ -83,23 +70,16 @@
         </div>
     </div>
 
-    <div class="centered-text d-flex">
-    <h3>Trips in mayors cities</h3>
-  </div>
-
     <div class="container">
+      <h3 class="mb-3">Big city life</h3>
         <div class="row">
             <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <%= image_tag "Strasbourg.jpg", class: "card-img-top d-flex", width: "400", height: "300" %>
+                    <%= image_tag "Paris.jpg", class: "card-img-top d-flex", width: "400", height: "300" %>
                     <div class="card-body">
-                        <h5> <%= button_to "Strasbourg to Bordeaux",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <h6> Paris to Versailles</h6>
                         <p class="card-text">
-                            This trip starting at Strasbourg
-                            with first stop in Paris
-                            second stop at Lyon
-                            third stop in Versailles
-                            and finishing at Bordeaux.
+                            No time to lose but still want to be able to say you've been to France? All you'll need is a weekend to see the Eiffel Tower and the Chateau de Versailles and you'll be a local. Oui oui!
                         </p>
                     </div>
                 </div>
@@ -108,13 +88,9 @@
                 <div class="card">
                     <%= image_tag "Lille.jpg", class: "card-img-top", width: "400", height: "300" %>
                     <div class="card-body">
-                         <h5> <%= button_to "Lille to Strasbourg",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                         <h6> Lille to Strasbourg</h6>
                         <p class="card-text">
-                            This trip starting at Lille
-                            with first stop in Versailles
-                            second stop in Bordeaux
-                            third stop in Paris
-                            and ending at Strasbourg.
+                             This week in Lille and Strasbourg, two of the cities with the nicest French you'll find and the best Christmas market in the country will surely change your mind about the French. Even after they win the world cup. Again.
                         </p>
                     </div>
                 </div>
@@ -122,36 +98,27 @@
         </div>
     </div>
 
-    <div class="centered-text d-flex">
-    <h3>Trips for food lovers</h3>
-  </div>
-
     <div class="container">
+      <h3 class="mb-3">Feed meeeeee!</h3>
         <div class="row">
             <div class="col-lg-6 mb-4">
                 <div class="card">
                     <%= image_tag "Biarritz.jpg", class: "card-img-top", width: "400", height: "300" %>
                     <div class="card-body">
-                        <h5> <%= button_to "Biarritz to Marseille",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <h6> Biarritz to Bordeaux</h6>
                         <p class="card-text">
-                            This trip starting at Biarritz
-                            with first stop in Paris
-                            and ending in Marseille.
+                            Ok, cut the chit chat, take me to the South-east of France to eat duck liver! I'm preparing my winter body.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <%= image_tag "Saint-Malo", class: "card-img-top", width: "400", height: "300" %>
+                    <%= image_tag "Marseille", class: "card-img-top", width: "400", height: "300" %>
                     <div class="card-body">
-                        <h5> <%= button_to "Saint-Malo to Paris",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <h6> Marseilles to Lyon</h6>
                         <p class="card-text">
-                            This trip starting at Saint-Malo
-                            with first stop in Paris
-                            second stop in Strasbourg
-                            third stop in Lille
-                            and ending in Paris.
+                            Seafood and the french gastronomy capital city all in a weekend, this is how you discover the finest cuisine in the world.
                         </p>
                     </div>
                 </div>
