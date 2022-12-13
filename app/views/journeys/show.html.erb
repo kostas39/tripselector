@@ -1,7 +1,5 @@
-<div class="city-banner d-flex justify-content-center align-items-center" style="background-image: url('<%= image_path "#{@city_journeys.first.city.name}.jpg"%>')">
-  <h1> <%= @journey.name %> </h1>
-</div>
+<div data-controller="edit-journey" data-edit-journey-target="show">
 
-<div class="page-container" data-controller="edit-journey" data-edit-journey-target="show">
-  <%= render"show_partial", city_journeys: @city_journeys, journey: @journey, markers: @markers %>
+    <%= render"show_partial", city_journeys: @city_journeys, journey: @journey, markers: @markers %>
+
 </div>

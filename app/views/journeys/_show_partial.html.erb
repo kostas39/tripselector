@@ -1,19 +1,24 @@
-
-  <div>
-    <h4 class="mb-4" data-edit-journey-target="title">
-      <%= "This journey starts on #{city_journeys.first.start_date.strftime("%a %d %B")} in #{city_journeys.first.city.name} and ends on #{city_journeys.last.end_date.strftime("%a %d %B")} in #{city_journeys.last.city.name}." %>
-    </h4>
-    <% city_journeys.each do |city_journey| %>
-      <%= render "journeys/city_journey_card", city_journey: city_journey %>
-    <% end %>
-
-    <h4 class="ml-2 p-3"> Enjoy your trip! </h4>
+ <div class="city-banner d-flex justify-content-center align-items-center" style="background-image: url('<%= image_path "#{city_journeys.first.city.name}.jpg"%>')">
+    <h1> <%= journey.name %> </h1>
   </div>
-  <div style="width: 50%">
+
+  <div class="page-container">
     <div>
-      <% if current_user.journeys.last.id == journey.id %>
-      <%= button_to "Not happy? Try again", journeys_create_new_path, method: :post , class:"btn trip-btn-cust"%>
+      <h4 class="mb-4" data-edit-journey-target="title">
+        <%= "This journey starts on #{city_journeys.first.start_date.strftime("%a %d %B")} in #{city_journeys.first.city.name} and ends on #{city_journeys.last.end_date.strftime("%a %d %B")} in #{city_journeys.last.city.name}." %>
+      </h4>
+      <% city_journeys.each do |city_journey| %>
+        <%= render "journeys/city_journey_card", city_journey: city_journey %>
       <% end %>
+
+      <h4 class="ml-2 p-3"> Enjoy your trip! </h4>
     </div>
-    <%= render "journeys/mapbox", markers: markers %>
+    <div style="width: 50%">
+      <div>
+        <% if current_user.journeys.last.id == journey.id %>
+        <%= button_to "Not happy? Try again", journeys_create_new_path, method: :post , class:"btn trip-btn-cust"%>
+        <% end %>
+      </div>
+      <%= render "journeys/mapbox", markers: markers %>
+    </div>
   </div>
