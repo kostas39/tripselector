@@ -11,7 +11,153 @@
     <p class="fs-4"> Your dream adventure is just a click away! </p>
     <p class="fs-4"> Already <%= CityJourney.count + 256 %> cities visited and <%= Journey.count + 57 %> trips planned with Trips Selector ! <p>
   </div>
+<br>
+<br>
+  <div class="centered-text d-flex">
+    <h3>Trips to the sea</h3>
+  </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <%= image_tag "Saint-Malo.jpg", class: "card-img-top", width: "400", height: "300"%>
+                    <div class="card-body">
+                      <h5> <%= button_to "Nantes to Ars-en-Ré",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <p class="card-text">
+                            This trip starting in Nantes
+                            with the next city to Biarritz
+                            and ending in Ars-en-Ré.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                   <%= image_tag "La-Rochelle.jpg", class: "card-img-top", width: "400", height: "300" %>
+                    <div class="card-body">
+                        <h5> <%= button_to "Saint-Malo to Ars-en-Ré",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <p class="card-text">
+                            This trip starting in Saint-Malo
+                            and ending in Ars-en-Ré.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="centered-text d-flex">
+    <h3>Trips to the mountain</h3>
+  </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <%= image_tag "Aubenas.jpg", class: "card-img-top", width: "400", height: "300" %>
+                    <div class="card-body">
+                        <h5> <%= button_to "Aubenas to Annecy",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <p class="card-text">
+                            This trip starting in Aubenas
+                            and ending in Annecy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <%= image_tag "Annecy.jpg", class: "card-img-top", width: "400", height: "300" %>
+                    <div class="card-body">
+                        <h5> <%= button_to "Annecy to Grenoble",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <p class="card-text">
+                            This trip starting at Annecy
+                            with first stop at Grenoble
+                            second stop is Chambéry
+                            and ending at Aubenas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="centered-text d-flex">
+    <h3>Trips in mayors cities</h3>
+  </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <%= image_tag "Strasbourg.jpg", class: "card-img-top d-flex", width: "400", height: "300" %>
+                    <div class="card-body">
+                        <h5> <%= button_to "Strasbourg to Bordeaux",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <p class="card-text">
+                            This trip starting at Strasbourg
+                            with first stop in Paris
+                            second stop at Lyon
+                            third stop in Versailles
+                            and finishing at Bordeaux.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <%= image_tag "Lille.jpg", class: "card-img-top", width: "400", height: "300" %>
+                    <div class="card-body">
+                         <h5> <%= button_to "Lille to Strasbourg",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <p class="card-text">
+                            This trip starting at Lille
+                            with first stop in Versailles
+                            second stop in Bordeaux
+                            third stop in Paris
+                            and ending at Strasbourg.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="centered-text d-flex">
+    <h3>Trips for food lovers</h3>
+  </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <%= image_tag "Biarritz.jpg", class: "card-img-top", width: "400", height: "300" %>
+                    <div class="card-body">
+                        <h5> <%= button_to "Biarritz to Marseille",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <p class="card-text">
+                            This trip starting at Biarritz
+                            with first stop in Paris
+                            and ending in Marseille.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <%= image_tag "Saint-Malo", class: "card-img-top", width: "400", height: "300" %>
+                    <div class="card-body">
+                        <h5> <%= button_to "Saint-Malo to Paris",journeys_create_new_path, method: :post, class:"btn" %></h5>
+                        <p class="card-text">
+                            This trip starting at Saint-Malo
+                            with first stop in Paris
+                            second stop in Strasbourg
+                            third stop in Lille
+                            and ending in Paris.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   <div class="align-items-center d-flex justify-content-center">
     <%= link_to "Create your own dream adventure", new_journey_path, class:"btn-ref standard-button mt-5 fs-5", id:"home-button" %>
   </div>
