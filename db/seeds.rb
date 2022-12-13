@@ -435,35 +435,35 @@ cathedrale_saint_malo = Activity.create(name: "Saint Malo Cathedral",
                                         tags: "Historic",
                                         description: "This is a beautiful cathedral! Make sure you visit it if you go to Saint-Malo! You get a sense of the history as well the impression of a vibrant, active place of worship.",
                                         city_id: saint_malo.id)
-nantes_journey = Journey.create(name: "Nantes to Ars-en-Ré",
-                                tag: "Sea",
-                                description: "This trip starting in Nantes with the next city to Biarritz and ending in Ars-en-Ré.",
-                                city_id: nantes.id)
-saint_malo_journey = Journey.create(name: "Saint-Malo to Ars-en-Ré",
-                                tag: "Sea",
-                                description: "This trip starting in Saint-Malo and ending in Ars-en-Ré.",
-                                city_id: saint_malo.id)
-aubenas_journey = Journey.create(name: "Aubenas to Annecy",
-                                tag: "Mountain",
-                                description: "This trip starting in Aubenas and ending in Annecy.",
-                                city_id: aubenas.id)
-annecy_journey = Journey.create(name: "Annecy to Grenoble",
-                                tag: "Mountain",
-                                description: "This trip starting at Annecy with first stop at Grenoble second stop is Chambéry and ending at Aubenas.",
-                                city_id: annecy.id)
-strasbourg_journey = Journey.create(name: "Strasbourg to Bordeaux",
-                                tag: "Touristy",
-                                description: "This trip starting at Strasbourg with first stop in Paris second stop at Lyon third stop in Versailles and finishing at Bordeaux.",
-                                city_id: strasbourg.id)
-lille_journey = Journey.create(name: "Lille to Strasbourg",
-                                tag: "Touristy",
-                                description: "This trip starting at Lille with first stop in Versailles second stop in Bordeaux third stop in Paris and ending at Strasbourg.",
-                                city_id: lille.id)
-biarritz_journey = Journey.create(name: "Biarritz to Marseille",
-                                tag: "food",
-                                description: "This trip starting at Biarritz with first stop in Paris and ending in Marseille.",
-                                city_id: biarritz.id)
-saint_journey = Journey.create(name: "Saint-Malo to Paris",
-                                tag: "food",
-                                description: "This trip starting at Saint-Malo with first stop in Paris second stop in Strasbourg third stop in Lille and ending in Paris.",
-                                city_id: saint_malo.id)
+# nantes_journey = Journey.create(name: "Nantes to Ars-en-Ré",
+#                                 tag: "Sea",
+#                                 description: "This trip starting in Nantes with the next city to Biarritz and ending in Ars-en-Ré.",
+#                                 city_id: nantes.id)
+# saint_malo_journey = Journey.create(name: "Saint-Malo to Ars-en-Ré",
+#                                 tag: "Sea",
+#                                 description: "This trip starting in Saint-Malo and ending in Ars-en-Ré.",
+#                                 city_id: saint_malo.id)
+# aubenas_journey = Journey.create(name: "Aubenas to Annecy",
+#                                 tag: "Mountain",
+#                                 description: "This trip starting in Aubenas and ending in Annecy.",
+#                                 city_id: aubenas.id)
+# annecy_journey = Journey.create(name: "Annecy to Grenoble",
+#                                 tag: "Mountain",
+#                                 description: "This trip starting at Annecy with first stop at Grenoble second stop is Chambéry and ending at Aubenas.",
+#                                 city_id: annecy.id)
+# strasbourg_journey = Journey.create(name: "Strasbourg to Bordeaux",
+#                                 tag: "Touristy",
+#                                 description: "This trip starting at Strasbourg with first stop in Paris second stop at Lyon third stop in Versailles and finishing at Bordeaux.",
+#                                 city_id: strasbourg.id)
+# lille_journey = Journey.create(name: "Lille to Strasbourg",
+#                                 tag: "Touristy",
+#                                 description: "This trip starting at Lille with first stop in Versailles second stop in Bordeaux third stop in Paris and ending at Strasbourg.",
+#                                 city_id: lille.id)
+# biarritz_journey = Journey.create(name: "Biarritz to Marseille",
+#                                 tag: "food",
+#                                 description: "This trip starting at Biarritz with first stop in Paris and ending in Marseille.",
+#                                 city_id: biarritz.id)
+# saint_journey = Journey.create(name: "Saint-Malo to Paris",
+#                                 tag: "food",
+#                                 description: "This trip starting at Saint-Malo with first stop in Paris second stop in Strasbourg third stop in Lille and ending in Paris.",
+#                                 city_id: saint_malo.id)
