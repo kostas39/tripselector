@@ -21,9 +21,11 @@
                 <div id="dates">
                   <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %> </p>
                 </div>
-                <div class="delete border-top mt-3 pt-3">
-                  <p class="btn text-white button-cancel rounded-pill m-1"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
-                </div>
+                <button id="dashboard-button">
+                  <%= link_to journey_path(journey), data: { "turbo-method": :delete }, id:"trash-icon" do %>
+                    <i class="fa-solid fa-trash"></i>
+                  <% end %>
+                </button>
               </div>
             </div>
           <% end %>
@@ -49,9 +51,11 @@
                   <div id="dates">
                     <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %> </p>
                   </div>
-                  <div class="delete border-top mt-3 pt-3">
-                    <p class="btn text-white button-cancel rounded-pill m-1"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
-                  </div>
+                  <button id="dashboard-button">
+                    <%= link_to journey_path(journey), data: { "turbo-method": :delete }, id:"trash-icon" do %>
+                      <i class="fa-solid fa-trash"></i>
+                    <% end %>
+                </button>
                 </div>
               </div>
             <% end %>
@@ -77,9 +81,11 @@
                 <div id="dates">
                   <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %></p>
                 </div>
-                <div class="delete border-top mt-3 pt-3">
-                  <p class="btn text-white button-cancel rounded-pill m-1"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
-                </div>
+                <button id="dashboard-button">
+                  <%= link_to journey_path(journey), data: { "turbo-method": :delete }, id:"trash-icon" do %>
+                    <i class="fa-solid fa-trash"></i>
+                  <% end %>
+                </button>
               </div>
             </div>
           <% end %>
