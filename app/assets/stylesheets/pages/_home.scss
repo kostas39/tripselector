@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 
 .home-banner {
-  height:500px;
+  height:70vh;
   display:flex;
   flex-direction: column;
   justify-content:center;
@@ -14,7 +14,7 @@
           rgba(0, 0, 0, 0.2)
         ),
         /* bottom, image */
-        url("home_banner.jpg");
+        url("home-banner-bg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -27,6 +27,7 @@
     justify-content:center;
     align-content:center;
     height: min-content;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
   }
 }
 
@@ -35,7 +36,7 @@
   margin: auto;
 }
 
-.home-button{
+.home-button {
   color: white;
   background-color: #164DB7;
   border-radius: 5px;
