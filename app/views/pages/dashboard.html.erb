@@ -21,8 +21,8 @@
                 <div id="dates">
                   <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %> </p>
                 </div>
-                <div class="delete">
-                  <p class="btn btn-danger rounded"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
+                <div class="delete border-top mt-3 pt-3">
+                  <p class="btn text-white button-cancel rounded-pill m-1"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
                 </div>
               </div>
             </div>
@@ -49,8 +49,8 @@
                   <div id="dates">
                     <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %> </p>
                   </div>
-                  <div class="delete">
-                    <p class="btn btn-danger rounded"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
+                  <div class="delete border-top mt-3 pt-3">
+                    <p class="btn text-white button-cancel rounded-pill m-1"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
                   </div>
                 </div>
               </div>
@@ -64,9 +64,9 @@
     </div>
 
     <% if @journeys.last.start_date <= Date.today %>
-        <h4> It seems you don't have any future journeys. It's time to start planning ! </h4>
-      <% else %>
-    <div class="bg-light p-3 m-3 border cards-container">
+      <h4> It seems you don't have any future journeys. It's time to start planning ! </h4>
+    <% else %>
+      <div class="bg-light p-3 m-3 border cards-container">
         <% @journeys.each do |journey| %>
         <% if journey.start_date > Date.today %>
           <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem">
@@ -77,14 +77,13 @@
               <div id="dates">
                 <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %></p>
               </div>
-              <div class="delete">
-                <p class="btn btn-danger rounded"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
+              <div class="delete border-top mt-3 pt-3">
+                <p class="btn text-white button-cancel rounded-pill m-1"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
               </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
-        <% end %>
-    </div>
+      </div>
     <% end %>
   <% end %>
 </div>
