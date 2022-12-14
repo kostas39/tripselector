@@ -6,161 +6,125 @@
   <div class="centered-text">
     <h2 class="mb-5"> What do we do at Trips Selector? </h2>
     <p class="fs-4"> Tired of spending days preparing your next holiday? Don’t want to spend a fortune on a travel agency? We got you covered! </p>
-    <p class="fs-4"> Trip Selector allows you to easily create your own trip, depending on the number of days, region or type of holiday you want. </p>
+    <p class="fs-4"> Trips Selector allows you to easily create your own trip, depending on the number of days, region or type of holiday you want. </p>
     <p class="fs-4"> Don’t feel inspired ? You can also browse our selection of unique trip to get you started. </p>
     <p class="fs-4"> Your dream adventure is just a click away! </p>
-    <p class="fs-4"> Already <%= CityJourney.count + 256 %> cities visited and <%= Journey.count + 57 %> trips planned with Trips Selector ! <p>
+    <p class="fs-4"> Already <strong> <%= CityJourney.count + 256 %> </strong> cities visited and <strong> <%= Journey.count + 57 %> </strong> trips planned with Trips Selector ! <p>
   </div>
-
+  <br>
+  <br>
   <div class="align-items-center d-flex flex-column justify-content-center mb-5">
     <%= link_to "Create your own dream adventure", new_journey_path, class:"btn-ref standard-button mt-5 fs-5", id:"home-button" %>
     <h1 class="m-5">See Our Featured Trips</h1>
   </div>
+</div>
 
-  <div class="centered-text d-flex">
-    <h3>Trips to the sea</h3>
-  </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <%= image_tag "assets/Saint-Malo.jpg", class: "card-img-top", width: "400", height: "300"%>
-                    <div class="card-body">
-                      <h5> <%= button_to "Nantes to Ars-en-Ré",journeys_create_new_path, method: :post, class:"btn" %></h5>
-                        <p class="card-text">
-                            This trip starting in Nantes
-                            with the next city to Biarritz
-                            and ending in Ars-en-Ré.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                   <%= image_tag "assets/La-Rochelle.jpg", class: "card-img-top", width: "400", height: "300" %>
-                    <div class="card-body">
-                        <h5> <%= button_to "Saint-Malo to Ars-en-Ré",journeys_create_new_path, method: :post, class:"btn" %></h5>
-                        <p class="card-text">
-                            This trip starting in Saint-Malo
-                            and ending in Ars-en-Ré.
-                        </p>
-                    </div>
-                </div>
+<div class="container">
+  <h3 class="mb-3">Fancy a swim?</h3>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card">
+          <%= image_tag "Saint-Malo.jpg", class: "card-img-top", width: "400", height: "300"%>
+          <div class="card-body">
+            <h6> <%= link_to "Saint-Malo to Nantes", journey_path(@sea_1) %> </h6>
+              <p class="card-text">
+                For an amazing week in and around Britany, discovering one of the most well preserved region in France.
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="card">
+           <%= image_tag "La-Rochelle.jpg", class: "card-img-top", width: "400", height: "300" %>
+            <div class="card-body">
+              <h6> <%= link_to "La Rochelle to Ars-en-Ré", journey_path(@sea_2) %></h6>
+              <p class="card-text">
+                A seaside weekend wandering the pretiest beaches on the Atlantic coast.
+              </p>
             </div>
         </div>
+      </div>
     </div>
-
-
-    <div class="centered-text d-flex">
-    <h3>Trips to the mountain</h3>
   </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <%= image_tag "assets/Aubenas.jpg", class: "card-img-top", width: "400", height: "300" %>
-                    <div class="card-body">
-                        <h5> <%= button_to "Aubenas to Annecy",journeys_create_new_path, method: :post, class:"btn" %></h5>
-                        <p class="card-text">
-                            This trip starting in Aubenas
-                            and ending in Annecy.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <%= image_tag "assets/Annecy.jpg", class: "card-img-top", width: "400", height: "300" %>
-                    <div class="card-body">
-                        <h5> <%= button_to "Annecy to Grenoble",journeys_create_new_path, method: :post, class:"btn" %></h5>
-                        <p class="card-text">
-                            This trip starting at Annecy
-                            with first stop at Grenoble
-                            second stop is Chambéry
-                            and ending at Aubenas.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="centered-text d-flex">
-    <h3>Trips in mayors cities</h3>
+  <div class="container">
+    <h3 class="mb-3">I want to get high</h3>
+      <div class="row">
+          <div class="col-lg-6 mb-4">
+              <div class="card">
+                  <%= image_tag "Aubenas.jpg", class: "card-img-top", width: "400", height: "300" %>
+                  <div class="card-body">
+                      <h6> <%= link_to "Aubenas to Lyon", journey_path(@mountain_1) %> </h6>
+                      <p class="card-text">
+                          A week in Auvergne, mixing good food in Lyon's bouchons (local restaurants) and some kayaking in France's nicest gorges.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+              <div class="card">
+                  <%= image_tag "Annecy.jpg", class: "card-img-top", width: "400", height: "300" %>
+                  <div class="card-body">
+                      <h6> <%= link_to "Annecy to Chambéry", journey_path(@mountain_2) %> </h6>
+                      <p class="card-text">
+                          A week-end near the 2 biggest and wildest lakes in France. Skiing is also on the menu !
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <%= image_tag "assets/Strasbourg.jpg", class: "card-img-top d-flex", width: "400", height: "300" %>
-                    <div class="card-body">
-                        <h5> <%= button_to "Strasbourg to Bordeaux",journeys_create_new_path, method: :post, class:"btn" %></h5>
-                        <p class="card-text">
-                            This trip starting at Strasbourg
-                            with first stop in Paris
-                            second stop at Lyon
-                            third stop in Versailles
-                            and finishing at Bordeaux.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <%= image_tag "assets/Lille.jpg", class: "card-img-top", width: "400", height: "300" %>
-                    <div class="card-body">
-                         <h5> <%= button_to "Lille to Strasbourg",journeys_create_new_path, method: :post, class:"btn" %></h5>
-                        <p class="card-text">
-                            This trip starting at Lille
-                            with first stop in Versailles
-                            second stop in Bordeaux
-                            third stop in Paris
-                            and ending at Strasbourg.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="centered-text d-flex">
-    <h3>Trips for food lovers</h3>
+  <div class="container">
+    <h3 class="mb-3">Big city life</h3>
+      <div class="row">
+          <div class="col-lg-6 mb-4">
+              <div class="card">
+                  <%= image_tag "Paris.jpg", class: "card-img-top d-flex", width: "400", height: "300" %>
+                  <div class="card-body">
+                      <h6> <%= link_to "Paris to Versailles", journey_path(@major_city_1) %> </h6>
+                      <p class="card-text">
+                          No time to lose but still want to be able to say you've been to France? All you'll need is a weekend to see the Eiffel Tower and the Chateau de Versailles and you'll be a local. Oui oui!
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+              <div class="card">
+                  <%= image_tag "Lille.jpg", class: "card-img-top", width: "400", height: "300" %>
+                  <div class="card-body">
+                       <h6> <%= link_to "Lille to Strasbourg", journey_path(@major_city_2) %></h6>
+                      <p class="card-text">
+                           This week in Lille and Strasbourg, two of the cities with the nicest French you'll find and the best Christmas market in the country will surely change your mind about the French. Even after they win the world cup. Again.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <%= image_tag "assets/Biarritz.jpg", class: "card-img-top", width: "400", height: "300" %>
-                    <div class="card-body">
-                        <h5> <%= button_to "Biarritz to Marseille",journeys_create_new_path, method: :post, class:"btn" %></h5>
-                        <p class="card-text">
-                            This trip starting at Biarritz
-                            with first stop in Paris
-                            and ending in Marseille.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <%= image_tag "assets/Saint-Malo", class: "card-img-top", width: "400", height: "300" %>
-                    <div class="card-body">
-                        <h5> <%= button_to "Saint-Malo to Paris",journeys_create_new_path, method: :post, class:"btn" %></h5>
-                        <p class="card-text">
-                            This trip starting at Saint-Malo
-                            with first stop in Paris
-                            second stop in Strasbourg
-                            third stop in Lille
-                            and ending in Paris.
-                        </p>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+  <h3 class="mb-3">Feed meeeeee!</h3>
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card">
+          <%= image_tag "Biarritz.jpg", class: "card-img-top", width: "400", height: "300" %>
+          <div class="card-body">
+            <h6> <%= link_to "Biarritz to Bordeaux", journey_path(@food_1) %></h6>
+            <p class="card-text">
+              Ok, cut the chit chat, take me to the South-east of France to eat duck liver! I'm preparing my winter body.
+            </p>
+          </div>
         </div>
+      </div>
+      <div class="col-lg-6 mb-4">
+        <div class="card">
+          <%= image_tag "Marseille", class: "card-img-top", width: "400", height: "300" %>
+          <div class="card-body">
+            <h6> <%= link_to "Marseille to Lyon", journey_path(@food_2) %></h6>
+            <p class="card-text">
+              Seafood and the french gastronomy capital city all in a weekend, this is how you discover the finest cuisine in the world.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </div>
 </div>
