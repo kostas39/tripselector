@@ -1,0 +1,48 @@
+<div class="db-banner">
+  <h1 class="mb-5"> Dashboard </h1>
+</div>
+
+<div class="card-deck card-page-container">
+
+  <ul class="nav nav-tabs mt-5">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page"> <%= link_to "Future journeys", dashboard_path, class: "nav-link" %> </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"> <%= link_to "Current journey", dashboard_current_path, class: "nav-link active" %></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"> <%= link_to "Past journeys", dashboard_past_path, class: "nav-link" %></a>
+    </li>
+  </ul>
+
+  <% if @journeys.empty? %>
+    <h3 class='mt-5 mb-5'> You don't have any journeys with us. Start filling your dashboard by planning some trips! </h3>
+  <% else %>
+      <% if @current_journey.size == 0 %>
+        <h4 class='mt-5 mb-5'> You are not currently travelling with us. What are you waiting for ? </h4>
+      <% else %>
+        <div class="p-3 m-3 cards-container">
+            <% @journeys.each do |journey| %>
+              <% if journey.start_date <= Date.today && journey.end_date >= Date.today %>
+                <div class="card shadow p-3 bg-white rounded-lg" id="dashboard-card" style="width: 18rem;">
+                  <%= image_tag "#{journey.city_journeys.first.city.name}.jpg", :class => "dashboard-image" %>
+                  <div class="card-body text-center">
+                    <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
+                    <p><%= journey.tag %></p>
+                    <div id="dates">
+                      <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %> </p>
+                    </div>
+                    <button id="dashboard-button">
+                      <%= link_to journey_path(journey), data: { "turbo-method": :delete }, id:"trash-icon" do %>
+                        <i class="fa-solid fa-trash"></i>
+                      <% end %>
+                  </button>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+        </div>
+      <% end %>
+  <% end %>
+</div>

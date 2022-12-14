@@ -40,11 +40,53 @@
   border-radius: 5px;
 }
 
-.button-cancel {
-  background-color: rgb(243, 95, 95);
-  color: white;
+#dashboard-card{
+  height: 22rem;
 }
 
-#dashboard-card{
-  height: 27rem;
+#dashboard-button{
+  background-color: transparent;
+  border: none;
+  border-width: 1px;
+  padding: 1px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position:absolute; bottom:0; right:0;
+  margin: 10px;
+}
+
+#trash-icon{
+  font-size: medium;
+  color: $black;
+}
+
+.db-banner {
+  height:500px;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-content:center;
+  // background-image: url("db_banner.jpg");
+  background:
+        /* top, transparent black, faked with gradient */
+        linear-gradient(
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        /* bottom, image */
+        url("Db_banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color:$white;
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    text-rendering: optimizelegibility;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    height: min-content;
+  }
 }

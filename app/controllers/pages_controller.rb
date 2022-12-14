@@ -13,7 +13,29 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    # show past present and future journeys
+    # show future journeys
+    @journeys = current_user.journeys.sort_by(&:start_date)
+    @current_journey = []
+    @journeys.each do |journey|
+      if journey.start_date <= Date.today && journey.end_date >= Date.today
+        @current_journey << journey
+      end
+    end
+  end
+
+  def dashboard_current
+    # show current journeys
+    @journeys = current_user.journeys.sort_by(&:start_date)
+    @current_journey = []
+    @journeys.each do |journey|
+      if journey.start_date <= Date.today && journey.end_date >= Date.today
+        @current_journey << journey
+      end
+    end
+  end
+
+  def dashboard_past
+    # show past journeys
     @journeys = current_user.journeys.sort_by(&:start_date)
     @current_journey = []
     @journeys.each do |journey|

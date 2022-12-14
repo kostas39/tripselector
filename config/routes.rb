@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   post "/journeys/create/new", to: "journeys#create_new"
 
   get 'dashboard', to: 'pages#dashboard'
+  get 'dashboard/current', to: "pages#dashboard_current"
+  get 'dashboard/past', to: "pages#dashboard_past"
+
   get 'profile', to: 'pages#profile'
 
   resources :city_journeys, only:[:update]
