@@ -24,7 +24,7 @@
 }
 
 .card-page-container {
-  width: 60%;
+  width: 80%;
   margin: auto;
 }
 
@@ -34,6 +34,10 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
+}
+
+.dashboard-image{
+  border-radius: 5px;
 }
 
 .button-cancel {
