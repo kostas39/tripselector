@@ -13,9 +13,23 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
-#profile_text {
+#profile-text {
   padding-right: 15px;
 }
 #image_space {
   padding-right: 15px;
+}
+
+.navbar-text {
+  font-family: $body-font;
+  font-size: x-large;
+}
+
+.hdp-text {
+  font-family: $body-font;
+  font-size: medium;
+}
+
+.right-side-buttons-nav {
+  margin-right: 1%;
 }
