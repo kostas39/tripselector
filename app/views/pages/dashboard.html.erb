@@ -14,7 +14,7 @@
           <% @journeys.each do |journey| %>
           <% if journey.end_date < Date.today %>
             <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem;">
-              <%= image_tag "#{journey.city_journeys.first.city.name}.jpg", class:"h-50%" %>
+              <%= image_tag "#{journey.city_journeys.first.city.name}.jpg", :class => "dashboard-image" %>
               <div class="card-body text-center">
                 <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
                 <p><%= "#{journey.tag}" %></p>
@@ -42,7 +42,7 @@
           <% @journeys.each do |journey| %>
             <% if journey.start_date <= Date.today && journey.end_date >= Date.today %>
               <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem;">
-                <%= image_tag "#{journey.city_journeys.first.city.name}.jpg" %>
+                <%= image_tag "#{journey.city_journeys.first.city.name}.jpg", :class => "dashboard-image" %>
                 <div class="card-body text-center">
                   <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
                   <p><%= journey.tag %></p>
@@ -68,18 +68,17 @@
     <% else %>
       <div class="bg-light p-3 m-3 border cards-container">
         <% @journeys.each do |journey| %>
-          <% if journey.start_date > Date.today %>
-            <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem">
-              <%= image_tag "#{journey.city_journeys.first.city.name}.jpg" %>
-              <div class="card-body text-center">
-                <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
-                <p><%= journey.tag %></p>
-                <div id="dates">
-                  <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %></p>
-                </div>
-                <div class="delete border-top mt-3 pt-3">
-                  <p class="btn text-white button-cancel rounded-pill m-1"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
-                </div>
+        <% if journey.start_date > Date.today %>
+          <div class="card shadow p-3 bg-white rounded-lg" style="width: 18rem">
+            <%= image_tag "#{journey.city_journeys.first.city.name}.jpg", :class => "dashboard-image" %>
+            <div class="card-body text-center">
+              <p><%= link_to "#{journey.name}", journey_path(journey) %></p>
+              <p><%= journey.tag %></p>
+              <div id="dates">
+                <p> From <%= journey.start_date.strftime("%a %d %B") %> to <%= journey.end_date.strftime("%a %d %B") %></p>
+              </div>
+              <div class="delete border-top mt-3 pt-3">
+                <p class="btn text-white button-cancel rounded-pill m-1"><%= link_to "Delete Trip", journey_path(journey), data: { "turbo-method": :delete } %></p>
               </div>
             </div>
           <% end %>
