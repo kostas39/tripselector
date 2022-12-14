@@ -3,7 +3,7 @@
   </div>
 
   <div class="page-container">
-    <div>
+    <div class= "">
       <h4 class="mt-5" data-edit-journey-target="title">
         <%= "This journey starts on "%><u><%="#{city_journeys.first.start_date.strftime("%a %d %B")}"%></u> in <u><%="#{city_journeys.first.city.name}"%></u><%=" and ends on "%> <u><%="#{city_journeys.last.end_date.strftime("%a %d %B")}"%></u> <%="in"%> <u><%="#{city_journeys.last.city.name}." %></u>
       </h4>
@@ -15,13 +15,13 @@
 
       <h4 class="ml-2 p-3"> Enjoy your trip! </h4>
     </div>
-    <div style="width: 50%" class="mt-0">
+    <div style="width: 50%" class="mt-0 m-5">
       <div>
         <% if current_user.journeys.last.nil? || current_user.journeys.last.id != journey.id %>
           <%= nil %>
         <% else %>
           <div class="refresh-container d-flex justify-content-center align-items-center">
-            <div class="box-ref">
+            <div class="box-ref mt-4">
               <%= button_to raw('<h1>Try Again</h1>'), journeys_create_new_path, method: :post , class:"btn btn-ref"%>
             </div>
           </div>
