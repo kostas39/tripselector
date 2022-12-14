@@ -451,13 +451,18 @@ sea_1 = Journey.create!(name: "Tour of Britany",
                        end_date: "08/08/2022",
                        country: "France",
                        user: user_1)
-
 sea_2 = Journey.create!(name: "French Islands",
                        tag: "Sea",
                        start_date: "03/03/2022",
                        end_date: "08/08/2022",
                        country: "France",
                        user: user_1)
+sea_3 = Journey.create!(name: "Surfing USA",
+                        tag: "Sea",
+                        start_date: "03/03/2022",
+                        end_date: "08/08/2022",
+                        country: "France",
+                        user: user_1)
 
 mountain_1 = Journey.create!(name: "Food and kayak",
                             tag: "Mountain",
@@ -471,6 +476,12 @@ mountain_2 = Journey.create!(name: "Take me down to paradise city",
                             end_date: "08/08/2022",
                             country: "France",
                             user: user_1)
+mountain_3 = Journey.create!(name: "Rumble in Grenoble",
+                             tag: "Mountain",
+                             start_date: "03/03/2022",
+                             end_date: "08/08/2022",
+                             country: "France",
+                             user: user_1)
 major_city_1 = Journey.create!(name: "No time to lose",
                               tag: "Major City",
                               start_date: "03/03/2022",
@@ -483,6 +494,12 @@ major_city_2 = Journey.create!(name: "Can French people be nice?",
                               end_date: "08/08/2022",
                               country: "France",
                               user: user_1)
+major_city_3 = Journey.create!(name: "You're Lyon to me",
+                                tag: "Major City",
+                                start_date: "03/03/2022",
+                                end_date: "08/08/2022",
+                                country: "France",
+                                user: user_1)
 food_1 = Journey.create!(name: "Girls, just wanna eat duck",
                         tag: "Food",
                         start_date: "03/03/2022",
@@ -495,6 +512,12 @@ food_2 = Journey.create!(name: "Marseille bébé",
                         end_date: "08/08/2022",
                         country: "France",
                         user: user_1)
+food_3 = Journey.create!(name: "Feels like home",
+                          tag: "Food",
+                          start_date: "03/03/2022",
+                          end_date: "08/08/2022",
+                          country: "France",
+                          user: user_1)
 
 sea_1_city_1 = CityJourney.create!(city_id: saint_malo.id,
                                   journey_id: sea_1.id,
@@ -512,6 +535,10 @@ sea_2_city_2 = CityJourney.create!(city_id: ars_en_re.id,
                                   journey_id: sea_2.id,
                                   start_date: "05/03/2022",
                                   end_date: "08/08/2022")
+sea_3_city_1 = CityJourney.create!(city_id: biarritz.id,
+                                    journey_id: sea_3.id,
+                                    start_date: "03/03/2022",
+                                    end_date: "05/08/2022")
 mountain_1_city_1 = CityJourney.create!(city_id: aubenas.id,
                                        journey_id: mountain_1.id,
                                        start_date: "03/03/2022",
@@ -528,6 +555,10 @@ mountain_2_city_2 = CityJourney.create!(city_id: chambery.id,
                                        journey_id: mountain_2.id,
                                        start_date: "05/03/2022",
                                        end_date: "08/08/2022")
+mountain_3_city_1 = CityJourney.create!(city_id: grenoble.id,
+                                        journey_id: mountain_3.id,
+                                        start_date: "03/03/2022",
+                                        end_date: "05/08/2022")
 food_1_city_1 = CityJourney.create!(city_id: biarritz.id,
                                    journey_id: food_1.id,
                                    start_date: "03/03/2022",
@@ -544,6 +575,10 @@ food_2_city_2 = CityJourney.create!(city_id: lyon.id,
                                    journey_id: food_2.id,
                                    start_date: "05/03/2022",
                                    end_date: "08/08/2022")
+food_3_city_1 = CityJourney.create!(city_id: strasbourg.id,
+                                    journey_id: food_3.id,
+                                    start_date: "03/03/2022",
+                                    end_date: "05/08/2022")
 major_city_1_city_1 = CityJourney.create!(city_id: paris.id,
                                          journey_id: major_city_1.id,
                                          start_date: "03/03/2022",
@@ -560,4 +595,8 @@ major_city_2_city_2 = CityJourney.create!(city_id: strasbourg.id,
                                          journey_id: major_city_2.id,
                                          start_date: "05/03/2022",
                                          end_date: "08/08/2022")
+major_city_3_city_1 = CityJourney.create!(city_id: lyon.id,
+                                          journey_id: major_city_3.id,
+                                          start_date: "03/03/2022",
+                                          end_date: "05/08/2022")
 puts "seeds completed"
