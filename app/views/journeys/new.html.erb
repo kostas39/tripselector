@@ -1,6 +1,6 @@
 <div class="form-container mb-4">
 <div class="form-img w-100">
-  <h1 class="adv-heading">Let's Go on an Adventure! </h1>
+  <h1 class="adv-heading">Ready for an Adventure! </h1>
 </div>
 <%# implement a button, to autoinput surprise me for all, careful to have seeds for everything tho %>
 <div class="form-inputs">
@@ -16,9 +16,9 @@
             collection_wrapper_class: 'category-wrapper',
             item_wrapper_class: 'category-item',
             input_html: {class: 'category-selector'},
-            collection: [["🌮 Food", "Food"], ["🗻 Mountain", "Mountain"], ["🏖 Sea", "Sea"], ["🏛 Major City", "Major City"], ["🎲 Surprise Me!", "Surprise Me!"]] %>
+            collection: [["🌮 Food", "Food"],  ["🗻 Mountain", "Mountain"], ["🏖 Sea", "Sea"], ["🏛 Major City", "Major City"], ["🎲 Surprise Me!", "Surprise Me!"]] %>
 
-    <%= f.submit "Let's travel!", class:"btn standard-button", id:"submit-button" %>
+    <%= f.submit "Let's travel", class:"btn standard-button", id:"submit-button" %>
   <% end %>
 </div>
 </div>
