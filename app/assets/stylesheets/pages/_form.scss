@@ -2,7 +2,7 @@
   margin: auto;
   width: 50%;
   display:flex;
-  margin-top: 2.5%;
+  margin-top: 1%;
   background-color: white;
   border-radius: 15px;
   color:$gray;
@@ -26,7 +26,7 @@
 }
 
 .form-inputs {
-  margin: 5%;
+  margin: 2.5%;
 }
 
 .adv-heading {
@@ -37,8 +37,8 @@
   align-self: center;
 }
 
-.edit-form{
-  display: inline-flex
+.edit-form {
+  display: inline-flex;
 }
 
 .edit-form > div {
@@ -47,4 +47,15 @@
 
 .category-selector {
   margin-bottom: 5px;
+}
+
+.svg-new-left {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
+.svg-new-right {
+  position: absolute;
+  top: 25%;
+  right: 2.5%;
 }
