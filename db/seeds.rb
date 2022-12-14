@@ -6,6 +6,7 @@
 Activity.destroy_all
 Journey.destroy_all
 City.destroy_all
+User.destroy_all
 
 paris = City.create(name: "Paris",
                     description: "",
@@ -457,7 +458,7 @@ sea_2 = Journey.create!(name: "French Islands",
                        end_date: "08/08/2022",
                        country: "France",
                        user: user_1)
-                       
+
 mountain_1 = Journey.create!(name: "Food and kayak",
                             tag: "Mountain",
                             start_date: "03/03/2022",
