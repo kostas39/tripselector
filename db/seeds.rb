@@ -557,3 +557,4 @@ major_city_2_city_2 = CityJourney.create(city_id: strasbourg.id,
                                          journey_id: major_city_2.id,
                                          start_date: "05/03/2022",
                                          end_date: "08/08/2022")
+puts "seeds completed"
