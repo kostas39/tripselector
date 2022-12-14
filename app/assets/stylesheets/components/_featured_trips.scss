@@ -1,0 +1,67 @@
+
+.featured-title {
+  text-align: center;
+  margin: 2%;
+  box-shadow: none;
+}
+
+.featured-trips-container {
+  margin-left: 4%;
+  margin-right: 4%;
+  border-radius: 10px;
+  margin-bottom: 3%;
+}
+
+.featured-trips-category-container {
+  margin-top: 1%;
+  padding: 1%;
+  padding-top: 2%;
+  margin-bottom: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+  height: 60%;
+  width: 100%;
+}
+
+.featured-card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px darkgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+  overflow: hidden;
+  margin: 1.5%;
+}
+
+.featured-card-body {
+  height: 20vh;
+  font-family: $body-font;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-body-title {
+  color:$gray;
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.featured-card-text {
+  padding: 1.5rem;
+  p {
+    height: min-content;
+  }
+}

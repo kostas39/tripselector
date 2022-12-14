@@ -1,0 +1,19 @@
+#user-city-trip-banner {
+  width:100vw;
+  margin: 0;
+  border-radius: 0;
+  background:
+  /* top, transparent black, faked with gradient */
+  linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ),
+  /* bottom, image */
+  url("info-banner-backgrnd.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: $body-font;
+  color: white;
+
+}

@@ -1,0 +1,35 @@
+.home-info-container{
+display: inline-flex;
+background-color: $light-blue;
+margin-left: 4%;
+margin-right: 4%;
+border:none;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+}
+
+.home-info-card {
+  display: inline-flex;
+  margin: 2%;
+  border:none;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-info-segment {
+  width: 33.3%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5%;
+  font-family: $body-font;
+}
+
+.middle-segment-borders {
+  border-left: 1px solid $white;
+  border-right: 1px solid $white;
+}
