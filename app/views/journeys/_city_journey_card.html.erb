@@ -4,8 +4,7 @@
     <h4 class="m-4"> <strong> <%= city_journey.city.name %> </strong> <%= "from #{city_journey.start_date.strftime("%a %d %B")} to #{city_journey.end_date.strftime("%a %d %B")}" %> </h4>
       <div>
         <div class="d-flex flex-column justify-content-center align-items-center">
-          <div>
-            <p data-read-more-target="content"></p>
+          <div class="w-75">
               <% city_journey.city.activities.each do |activity| %>
                 <ul>
                   <li> <strong> <%= activity.name %> </strong> <%= ": #{activity.description}" %> </li>
