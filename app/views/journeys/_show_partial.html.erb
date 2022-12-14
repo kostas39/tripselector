@@ -19,8 +19,8 @@
       <div>
         <% if current_user.journeys.last.id == journey.id %>
           <div class="refresh-container d-flex justify-content-center align-items-center">
-            <div class="box-3">
-              <%= button_to raw('<h1>Try Again</h1>'), journeys_create_new_path, method: :post , class:"btn btn-3"%>
+            <div class="box-ref">
+              <%= button_to raw('<h1>Try Again</h1>'), journeys_create_new_path, method: :post , class:"btn btn-ref"%>
             </div>
           </div>
         <% end %>
