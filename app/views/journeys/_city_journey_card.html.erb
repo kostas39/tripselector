@@ -1,14 +1,14 @@
 <div class="city-journey-card" data-edit-journey-target="card">
   <%= image_tag("#{city_journey.city.name}.jpg", :class => "city-card-picture") %>
   <div class="city-journey-info <%= 'd-none' if city_journey.errors.any? %>" data-edit-journey-target="infos">
-    <h4 class="m-4"> <strong> <%= city_journey.city.name %> </strong> <%= "from #{city_journey.start_date.strftime("%a %d %B")} to #{city_journey.end_date.strftime("%a %d %B")}" %> </h4>
       <div>
-        <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-left">
           <div class="w-75">
+            <h4 class="mb-4"> <strong> <%= city_journey.city.name %> </strong> <%= "from #{city_journey.start_date.strftime("%a %d %B")} to #{city_journey.end_date.strftime("%a %d %B")}" %> </h4>
               <% city_journey.city.activities.each do |activity| %>
-                <ul>
-                  <li> <strong> <%= activity.name %> </strong> <%= ": #{activity.description}" %> </li>
-                </ul>
+                <div class="activities mx-2">
+                  <strong> <%= activity.name %> :</strong> <%= " #{activity.description}" %>
+                </div>
               <% end %>
           </div>
         </div>
