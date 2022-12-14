@@ -7,6 +7,7 @@
 
 .category-item {
   width: 100%;
+  margin-bottom: 8px;
   border: 0.2px solid #CED4DA;
 }
 
@@ -25,6 +26,8 @@
   font-family: $body-font;
   text-align: center;
   border: 0.2px solid #CED4DA;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .category-selector:checked + label {

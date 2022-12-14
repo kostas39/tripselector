@@ -1,3 +1,12 @@
 .card-map-aligner {
   margin-top: 25px;
 }
+
+#edit-card-button {
+  background-color: transparent;
+  border: 1px solid $button;
+  height: fit-content;
+  width: fit-content;
+  color:$button;
+  margin-left: 20px;
+}
