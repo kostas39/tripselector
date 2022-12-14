@@ -10,7 +10,14 @@
 }
 
 .form-img {
-  background-image: asset-url("assets/mountain.jpeg");
+  background:
+  /* top, transparent black, faked with gradient */
+  linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ),
+  /* bottom, image */
+  url("mountain.jpeg");
   background-position: center;
   object-fit:cover;
   background-size: cover;
