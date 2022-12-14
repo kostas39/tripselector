@@ -436,124 +436,126 @@ cathedrale_saint_malo = Activity.create(name: "Saint Malo Cathedral",
                                         description: "This is a beautiful cathedral! Make sure you visit it if you go to Saint-Malo! You get a sense of the history as well the impression of a vibrant, active place of worship.",
                                         city_id: saint_malo.id)
 
-user_1 = User.create(first_name: "admin",
+user_1 = User.create!(first_name: "admin",
                      last_name: "admin",
                      username: "admin",
                      email: "admin@admin.com",
                      password: "admin@admin.com",
                      password_confirmation: "admin@admin.com"
-                    )
+                     )
 
-sea_1 = Journey.create(name: "Tour of Britany",
+sea_1 = Journey.create!(name: "Tour of Britany",
                        tag: "Sea",
                        start_date: "03/03/2022",
                        end_date: "08/08/2022",
                        country: "France",
-                       user_id: user_1.id)
-sea_2 = Journey.create(name: "French Islands",
+                       user: user_1)
+
+sea_2 = Journey.create!(name: "French Islands",
                        tag: "Sea",
                        start_date: "03/03/2022",
                        end_date: "08/08/2022",
                        country: "France",
-                       user_id: user_1.id)
-mountain_1 = Journey.create(name: "Food and kayak",
+                       user: user_1)
+                       
+mountain_1 = Journey.create!(name: "Food and kayak",
                             tag: "Mountain",
                             start_date: "03/03/2022",
                             end_date: "08/08/2022",
                             country: "France",
-                            user_id: user_1.id)
-mountain_2 = Journey.create(name: "Take me down to paradise city",
+                            user: user_1)
+mountain_2 = Journey.create!(name: "Take me down to paradise city",
                             tag: "Mountain",
                             start_date: "03/03/2022",
                             end_date: "08/08/2022",
                             country: "France",
-                            user_id: user_1.id)
-major_city_1 = Journey.create(name: "No time to lose",
+                            user: user_1)
+major_city_1 = Journey.create!(name: "No time to lose",
                               tag: "Major City",
                               start_date: "03/03/2022",
                               end_date: "08/08/2022",
                               country: "France",
-                              user_id: user_1.id)
-major_city_2 = Journey.create(name: "Can French people be nice?",
+                              user: user_1)
+major_city_2 = Journey.create!(name: "Can French people be nice?",
                               tag: "Major City",
                               start_date: "03/03/2022",
                               end_date: "08/08/2022",
                               country: "France",
-                              user_id: user_1.id)
-food_1 = Journey.create(name: "Girls, just wanna eat duck",
+                              user: user_1)
+food_1 = Journey.create!(name: "Girls, just wanna eat duck",
                         tag: "Food",
                         start_date: "03/03/2022",
                         end_date: "08/08/2022",
                         country: "France",
-                        user_id: user_1.id)
-food_2 = Journey.create(name: "Marseille bébé",
+                        user: user_1)
+food_2 = Journey.create!(name: "Marseille bébé",
                         tag: "Food",
                         start_date: "03/03/2022",
                         end_date: "08/08/2022",
                         country: "France",
-                        user_id: user_1.id)
+                        user: user_1)
 
-sea_1_city_1 = CityJourney.create(city_id: saint_malo.id,
+sea_1_city_1 = CityJourney.create!(city_id: saint_malo.id,
                                   journey_id: sea_1.id,
                                   start_date: "03/03/2022",
                                   end_date: "05/08/2022")
-sea_1_city_2 = CityJourney.create(city_id: nantes.id,
+sea_1_city_2 = CityJourney.create!(city_id: nantes.id,
                                   journey_id: sea_1.id,
                                   start_date: "05/03/2022",
                                   end_date: "08/08/2022")
-sea_2_city_1 = CityJourney.create(city_id: la_rochelle.id,
+sea_2_city_1 = CityJourney.create!(city_id: la_rochelle.id,
                                   journey_id: sea_2.id,
                                   start_date: "03/03/2022",
                                   end_date: "05/08/2022")
-sea_2_city_2 = CityJourney.create(city_id: ars_en_re.id,
+sea_2_city_2 = CityJourney.create!(city_id: ars_en_re.id,
                                   journey_id: sea_2.id,
                                   start_date: "05/03/2022",
                                   end_date: "08/08/2022")
-mountain_1_city_1 = CityJourney.create(city_id: aubenas.id,
+mountain_1_city_1 = CityJourney.create!(city_id: aubenas.id,
                                        journey_id: mountain_1.id,
                                        start_date: "03/03/2022",
                                        end_date: "05/08/2022")
-mountain_1_city_2 = CityJourney.create(city_id: lyon.id,
+mountain_1_city_2 = CityJourney.create!(city_id: lyon.id,
                                        journey_id: mountain_1.id,
                                        start_date: "05/03/2022",
                                        end_date: "08/08/2022")
-mountain_2_city_1 = CityJourney.create(city_id: annecy.id,
+mountain_2_city_1 = CityJourney.create!(city_id: annecy.id,
                                        journey_id: mountain_2.id,
                                        start_date: "03/03/2022",
                                        end_date: "05/08/2022")
-mountain_2_city_2 = CityJourney.create(city_id: chambery.id,
+mountain_2_city_2 = CityJourney.create!(city_id: chambery.id,
                                        journey_id: mountain_2.id,
                                        start_date: "05/03/2022",
                                        end_date: "08/08/2022")
-food_1_city_1 = CityJourney.create(city_id: biarritz.id,
+food_1_city_1 = CityJourney.create!(city_id: biarritz.id,
                                    journey_id: food_1.id,
                                    start_date: "03/03/2022",
                                    end_date: "05/08/2022")
-food_1_city_2 = CityJourney.create(city_id: bordeaux.id,
+food_1_city_2 = CityJourney.create!(city_id: bordeaux.id,
                                    journey_id: food_1.id,
                                    start_date: "05/03/2022",
                                    end_date: "08/08/2022")
-food_2_city_1 = CityJourney.create(city_id: marseille.id,
+food_2_city_1 = CityJourney.create!(city_id: marseille.id,
                                    journey_id: food_2.id,
                                    start_date: "03/03/2022",
                                    end_date: "05/08/2022")
-food_2_city_2 = CityJourney.create(city_id: lyon.id,
+food_2_city_2 = CityJourney.create!(city_id: lyon.id,
                                    journey_id: food_2.id,
                                    start_date: "05/03/2022",
                                    end_date: "08/08/2022")
-major_city_1_city_1 = CityJourney.create(city_id: paris.id,
+major_city_1_city_1 = CityJourney.create!(city_id: paris.id,
                                          journey_id: major_city_1.id,
                                          start_date: "03/03/2022",
                                          end_date: "05/08/2022")
-major_city_1_city_2 = CityJourney.create(city_id: versailles.id,
+major_city_1_city_2 = CityJourney.create!(city_id: versailles.id,
                                          journey_id: major_city_1.id,
                                          start_date: "05/03/2022",
                                          end_date: "08/08/2022")
-major_city_2_city_1 = CityJourney.create(city_id: lille.id,
+major_city_2_city_1 = CityJourney.create!(city_id: lille.id,
                                          journey_id: major_city_2.id,
                                          start_date: "03/03/2022",
                                          end_date: "05/08/2022")
-major_city_2_city_2 = CityJourney.create(city_id: strasbourg.id,
+major_city_2_city_2 = CityJourney.create!(city_id: strasbourg.id,
                                          journey_id: major_city_2.id,
                                          start_date: "05/03/2022",
                                          end_date: "08/08/2022")
