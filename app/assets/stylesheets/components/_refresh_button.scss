@@ -4,22 +4,90 @@
   top: 7rem;
   z-index: 2;
 }
-.box-ref {
-  background-color: $button;
-  height: fit-content;
-	width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px darkgrey;
-}
-.box-ref:hover {
-  background-color: $button-hover;
-  color: black;
-}
+// .box-ref {
+//   background-color: $button;
+//   height: fit-content;
+// 	width: fit-content;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 10px;
+//   box-shadow: 0px 0px 5px darkgrey;
+// }
+// .box-ref:hover {
+//   background-color: $button-hover;
+//   color: black;
+// }
 
-.btn-ref {
+// .btn-ref {
+//   line-height: 50px;
+// 	height: fit-content;
+// 	text-align: center;
+// 	width: fit-content;
+// 	cursor: pointer;
+// 	color: $white;
+// 	transition: all 0.5s;
+// 	position: relative;
+//   border-radius: 10px;
+//   h1 {
+//     text-shadow: none;
+//   }
+// }
+// .btn-ref::before {
+// 	content: '';
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	z-index: 1;
+// 	background-color: rgba(255,255,255,0.1) ;
+//   border-radius: 10px;
+// 	transition: all 0.3s;
+// }
+// .btn-ref:hover::before {
+// 	opacity: 0 ;
+// 	transform: scale(0.5,0.5);
+//   border-radius: 10px;
+// }
+// .btn-ref::after {
+// 	content: '';
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	z-index: 1;
+// 	opacity: 0;
+// 	transition: all 0.3s;
+// 	border: 2px solid rgba(255,255,255,0.5);
+//   border-radius: 10px;
+// 	transform: scale(1.2,1.2);
+// }
+// .btn-ref:hover::after {
+// 	opacity: 1;
+// 	transform: scale(1,1);
+//   border-radius: 10px;
+// }
+// test
+.bn5 {
+  padding: 1.8em 4em;
+  border: none;
+  outline: none;
+  background:
+  /* top, transparent black, faked with gradient */
+  linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ),
+  /* bottom, image */
+  url("info-banner-backgrnd.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  z-index: 0;
+  font-family: $body-font;
   line-height: 50px;
 	height: fit-content;
 	text-align: center;
@@ -27,45 +95,63 @@
 	cursor: pointer;
 	color: $white;
 	transition: all 0.5s;
-	position: relative;
+  position: absolute;
+  top: 60%;
+  right: 39.5%;
   border-radius: 10px;
-  h1 {
-    text-shadow: none;
+}
+
+.bn5:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #c5d8f5,
+    #203da5,
+    #2d57ed,
+    #0051c9,
+    #2b037d
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
   }
 }
-.btn-ref::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	background-color: rgba(255,255,255,0.1) ;
-  border-radius: 10px;
-	transition: all 0.3s;
+
+.bn5:active:after {
+  background: transparent;
 }
-.btn-ref:hover::before {
-	opacity: 0 ;
-	transform: scale(0.5,0.5);
-  border-radius: 10px;
+
+.bn5:hover:before {
+  opacity: 1;
 }
-.btn-ref::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	opacity: 0;
-	transition: all 0.3s;
-	border: 2px solid rgba(255,255,255,0.5);
-  border-radius: 10px;
-	transform: scale(1.2,1.2);
-}
-.btn-ref:hover::after {
-	opacity: 1;
-	transform: scale(1,1);
+
+.bn5:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
   border-radius: 10px;
 }
