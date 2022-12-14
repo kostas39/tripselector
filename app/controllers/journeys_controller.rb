@@ -209,7 +209,8 @@ class JourneysController < ApplicationController
   def destroy
     @journey = Journey.find(params[:id])
     @journey.destroy
-    redirect_to dashboard_path
+    redirect_back(fallback_location: 'something')
+    flash.alert = "You have deleted your journey"
   end
 
   private
