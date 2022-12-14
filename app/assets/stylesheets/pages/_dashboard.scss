@@ -52,10 +52,41 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  position:absolute; top:0; right:0;
+  position:absolute; bottom:0; right:0;
+  margin: 10px;
 }
 
 #trash-icon{
-  font-size: small;
-  color: rgb(30, 30, 30);
+  font-size: medium;
+  color: $black;
+}
+
+.db-banner {
+  height:500px;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-content:center;
+  // background-image: url("db_banner.jpg");
+  background:
+        /* top, transparent black, faked with gradient */
+        linear-gradient(
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        ),
+        /* bottom, image */
+        url("Db_banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color:$white;
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    text-rendering: optimizelegibility;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    height: min-content;
+  }
 }
