@@ -28,10 +28,10 @@
           <% if current_user.photo.attached? %>
           <button style="border: none; background-color: transparent;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <%# <%= cl_image_tag current_user.photo.key, height: 50, width: 50, crop: :thumb, class: "avatar dropdown-toggle", id: "navbarDropdown" %>
-          <%= image_tag asset_path("ajavatar.jpeg"), height: 50, width: 50, class: "avatar dropdown-toggle", id: "navbarDropdown" %>
+          <%= image_tag asset_path("ajavatar.jpg"), height: 50, width: 50, class: "avatar dropdown-toggle", id: "navbarDropdown" %>
           </button>
           <% else %>
-          <%= image_tag asset_path("ajavatar.jpeg"), height: 50, width: 50, class: "avatar dropdown-toggle", id: "navbarDropdown" %>
+          <%= image_tag asset_path("ajavatar.jpg"), height: 50, width: 50, class: "avatar dropdown-toggle", id: "navbarDropdown" %>
             <%# <%= image_tag "https://www.pngall.com/wp-content/uploads/5/Profile-Avatar-PNG-Free-Download.png", size: 40, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
