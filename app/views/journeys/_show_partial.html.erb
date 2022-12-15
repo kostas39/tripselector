@@ -1,6 +1,6 @@
  <div class="city-banner d-flex justify-content-center align-items-center" style="background-image: url('<%= image_path "#{city_journeys.first.city.name}.jpg"%>')">
     <h1> <%= journey.name %> </h1>
-    <% if current_user.journeys.last.nil? || current_user.journeys.last.id != journey.id %>
+    <% if current_user.nil? || current_user.journeys.last.nil? || current_user.journeys.last.id != journey.id %>
           <%= nil %>
         <% else %>
     <%= button_to raw('<a>Boring! Give me another Journey!</a>'), journeys_create_new_path, method: :post , class:"bn5 mt-4 btn"%>
@@ -22,7 +22,7 @@
     </div>
     <div style="width: 50%" class="mt-0 m-5">
       <div>
-        <% if current_user.journeys.last.nil? || current_user.journeys.last.id != journey.id %>
+        <% if current_user.nil? || current_user.journeys.last.nil? || current_user.journeys.last.id != journey.id %>
           <%= nil %>
         <% else %>
           <div class="refresh-container d-flex justify-content-center align-items-center">
